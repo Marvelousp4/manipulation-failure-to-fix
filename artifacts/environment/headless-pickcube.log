@@ -1,0 +1,2 @@
+torch.Size([1, 42])
+(tensor([0.0473]), tensor([False]), tensor([False]), {'elapsed_steps': tensor([1], dtype=torch.int32), 'success': tensor([False]), 'is_obj_placed': tensor([False]), 'is_robot_static': tensor([False]), 'is_grasped': tensor([False])})

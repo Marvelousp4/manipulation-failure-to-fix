@@ -1,0 +1,4 @@
+success_wilson95,success_at_end_rate,condition,episodes,success_known,success_unknown,success_rate,mean_steps,mean_return
+"[np.float64(0.011038884327619805), np.float64(0.1346009068750702)]",0.04,clean,50,50,0,0.04,98.54,22.90959803139791
+"[np.float64(0.011038884327619805), np.float64(0.1346009068750702)]",0.04,observation_noise,50,50,0,0.04,99.1,24.577546297311784
+"[np.float64(0.003539259271646236), np.float64(0.10495443589637815)]",0.02,action_delay,50,50,0,0.02,99.88,17.912116900067776

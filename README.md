@@ -19,5 +19,7 @@ motion-planning demonstrations, seed 1, 10,000 updates. Evaluation: 50 paired se
 The included BC patch batches GPU transfers without changing training samples.
 Gymnasium 0.29.1 is required by the pinned official baseline's evaluation interface.
 
+Recorded clean success: **2/50 (4%)**; too weak for strong shift conclusions.
+
 [Protocol](docs/PROTOCOL.md) · [v0.2 evidence](docs/V02.md).
 ToyReach remains a smoke test. License pending IP/open-source review.

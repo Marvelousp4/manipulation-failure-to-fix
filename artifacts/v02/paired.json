@@ -1,0 +1,14 @@
+{
+  "observation_noise": {
+    "known_pairs": 50,
+    "regressions": 1,
+    "improvements": 1,
+    "success_rate_delta": 0.0
+  },
+  "action_delay": {
+    "known_pairs": 50,
+    "regressions": 2,
+    "improvements": 1,
+    "success_rate_delta": -0.02
+  }
+}

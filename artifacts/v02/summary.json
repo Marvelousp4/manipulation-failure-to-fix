@@ -1,0 +1,44 @@
+[
+  {
+    "success_wilson95": [
+      0.011038884327619805,
+      0.1346009068750702
+    ],
+    "success_at_end_rate": 0.04,
+    "condition": "clean",
+    "episodes": 50,
+    "success_known": 50,
+    "success_unknown": 0,
+    "success_rate": 0.04,
+    "mean_steps": 98.54,
+    "mean_return": 22.90959803139791
+  },
+  {
+    "success_wilson95": [
+      0.011038884327619805,
+      0.1346009068750702
+    ],
+    "success_at_end_rate": 0.04,
+    "condition": "observation_noise",
+    "episodes": 50,
+    "success_known": 50,
+    "success_unknown": 0,
+    "success_rate": 0.04,
+    "mean_steps": 99.1,
+    "mean_return": 24.577546297311784
+  },
+  {
+    "success_wilson95": [
+      0.003539259271646236,
+      0.10495443589637815
+    ],
+    "success_at_end_rate": 0.02,
+    "condition": "action_delay",
+    "episodes": 50,
+    "success_known": 50,
+    "success_unknown": 0,
+    "success_rate": 0.02,
+    "mean_steps": 99.88,
+    "mean_return": 17.912116900067776
+  }
+]

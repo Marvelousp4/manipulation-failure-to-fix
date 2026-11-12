@@ -1,0 +1,2 @@
+2 3 maxdiff 1.0 indices [18] a [1.] b [0.]
+2 4 maxdiff 1.0 indices [18] a [1.] b [0.]

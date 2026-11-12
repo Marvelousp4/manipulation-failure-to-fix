@@ -1,0 +1,19 @@
+{
+  "paired_initial_observations_matched": true,
+  "exact_repeat_episode_records": 9,
+  "exact_repeat_step_records": 900,
+  "videos": {
+    "clean-10000.mp4": {
+      "frames": 100,
+      "fps": 20.0
+    },
+    "action_delay-10000.mp4": {
+      "frames": 100,
+      "fps": 20.0
+    },
+    "observation_noise-10000.mp4": {
+      "frames": 100,
+      "fps": 20.0
+    }
+  }
+}

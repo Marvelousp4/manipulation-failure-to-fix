@@ -5,7 +5,7 @@
 - Noise affects every floating state coordinate in native units, without normalization/clipping.
 - Delay starts with zero commands and resets each episode. Controller: `pd_ee_delta_pos`.
 - Rebuild the PhysX scene every episode to clear cached grasp contacts.
-- CPU PhysX, 100-step horizon. Report success at any step and at the last step; termination is not success.
+- CPU PhysX, 100-step cap; stop on success termination or truncation. Report success at any step and at the last step; termination is not success.
 - Verify exact initial observation hashes across conditions. These do not certify every hidden simulator state.
 - Report Wilson 95% intervals and paired regressions/improvements; unknown success stays null.
 - Fixed final training checkpoint; evaluation seeds 10000–10049 differ from demonstration seeds 0–999.

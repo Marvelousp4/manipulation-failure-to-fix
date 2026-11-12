@@ -1,0 +1,185 @@
+[33;1m2026-11-12 09:04:36,927 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Loading 1000 episodes
+  0%|          | 0/1000 [00:00<?, ?it/s] 11%|█         | 112/1000 [00:00<00:00, 1108.40it/s] 22%|██▏       | 223/1000 [00:00<00:00, 1108.53it/s] 33%|███▎      | 334/1000 [00:00<00:00, 1097.69it/s] 45%|████▌     | 452/1000 [00:00<00:00, 1129.00it/s] 56%|█████▋    | 565/1000 [00:00<00:00, 1126.42it/s] 68%|██████▊   | 678/1000 [00:00<00:00, 1059.19it/s] 79%|███████▉  | 791/1000 [00:00<00:00, 1078.77it/s] 90%|█████████ | 902/1000 [00:00<00:00, 1086.27it/s]100%|██████████| 1000/1000 [00:00<00:00, 1078.30it/s]
+[33;1m2026-11-12 09:04:38,045 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Iteration 0, loss: 0.2615281045436859
+[33;1m2026-11-12 09:04:39,440 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:39,851 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:40,246 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:40,678 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:41,106 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:41,492 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:41,988 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:42,447 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:42,881 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:43,283 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:43,686 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 1000, loss: 0.004393409937620163
+[33;1m2026-11-12 09:04:47,846 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:48,236 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:48,616 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:49,008 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:49,428 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:49,814 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:50,226 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:50,710 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:51,117 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:51,578 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:51,985 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 2000, loss: 0.0020746015943586826
+[33;1m2026-11-12 09:04:58,403 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:58,825 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:59,218 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:04:59,624 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:00,027 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:00,449 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:00,901 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:01,338 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:01,752 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:02,191 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:02,618 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 3000, loss: 0.0013694626977667212
+[33;1m2026-11-12 09:05:06,964 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:07,385 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:07,797 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:08,223 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:08,648 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:09,170 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:09,578 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:09,989 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:10,376 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:10,769 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:11,197 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 4000, loss: 0.0005076447268947959
+[33;1m2026-11-12 09:05:15,056 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:15,471 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:15,914 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:16,337 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:16,739 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:17,119 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:17,510 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:17,928 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:18,384 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:18,830 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:19,304 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 5000, loss: 0.0010227351449429989
+[33;1m2026-11-12 09:05:23,610 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:23,994 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:24,400 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:24,846 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:25,267 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:25,691 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:26,120 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:26,568 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:27,022 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:27,450 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:30,093 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 6000, loss: 0.00041116352076642215
+[33;1m2026-11-12 09:05:34,137 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:34,519 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:34,911 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:35,324 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:35,723 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:36,144 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:36,567 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:36,956 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:37,356 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:37,781 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:38,210 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.1000
+return: 0.2000
+episode_len: 100.0000
+reward: 0.0020
+success_at_end: 0.0000
+New best success_once_rate: 0.1000. Saving checkpoint.
+Iteration 7000, loss: 0.0006681891973130405
+[33;1m2026-11-12 09:05:42,026 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:42,453 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:42,859 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:43,258 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:43,664 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:44,091 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:44,488 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:44,894 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:45,290 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:45,711 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:46,118 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.1000
+return: 1.4000
+episode_len: 100.0000
+reward: 0.0140
+success_at_end: 0.0000
+Iteration 8000, loss: 0.0003999212058261037
+[33;1m2026-11-12 09:05:50,187 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:50,617 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:51,063 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:51,472 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:51,876 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:52,292 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:52,685 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:53,100 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:53,495 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:53,922 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:54,333 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
+Iteration 9000, loss: 0.00027818893431685865
+[33;1m2026-11-12 09:05:58,426 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:58,815 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:59,215 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:05:59,635 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:00,048 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:00,474 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:00,892 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:01,329 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:01,775 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:04,477 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+[33;1m2026-11-12 09:06:04,889 - mani_skill  - WARNING - The chosen render mode is "rgb_array", but selected rendering device "None" does not support rendering[0m
+Evaluated 10 episodes
+success_once: 0.0000
+return: 0.0000
+episode_len: 100.0000
+reward: 0.0000
+success_at_end: 0.0000
