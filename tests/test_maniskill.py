@@ -15,6 +15,8 @@ def test_pickcube_state_reset_and_step():
     env = make_env("PickCube-v1", control_mode="pd_ee_delta_pos", render_backend="none")
     try:
         first, _ = env.reset(seed=10000)
+        for _ in range(100):
+            env.step(np.array([0.1, 0.2, 0.2, -1], dtype=np.float32))
         again, _ = env.reset(seed=10000)
         np.testing.assert_array_equal(as_numpy(first), as_numpy(again))
         assert as_numpy(first).shape == (1, 42)
@@ -51,3 +53,46 @@ def test_official_batch_patch_preserves_samples():
     batched = torch.utils.data.default_collate(ds.__getitems__(indices))
     for a, b in zip(original, batched):
         assert torch.equal(a, b)
+
+
+def test_trained_policy_pairs_match_after_rollout_history():
+    from pathlib import Path
+    from types import SimpleNamespace
+
+    from failure2fix.baseline import official_bc_loader
+    from failure2fix.evaluation import Condition, evaluate_condition
+
+    upstream = os.getenv("F2F_UPSTREAM")
+    root = Path(__file__).resolve().parents[1]
+    if not upstream or not (root / "artifacts/bc-pickcube.pt").exists():
+        pytest.skip("requires F2F_UPSTREAM and recorded checkpoint")
+    args = SimpleNamespace(
+        obs_mode="state",
+        env="PickCube-v1",
+        control_mode="pd_ee_delta_pos",
+        sim_backend="cpu",
+        checkpoint=str(root / "artifacts/bc-pickcube.pt"),
+        provenance=str(root / "artifacts/checkpoint-provenance.json"),
+        upstream=upstream,
+        device="cpu",
+    )
+    loader, _ = official_bc_loader(args)
+
+    def factory():
+        return make_env("PickCube-v1", control_mode="pd_ee_delta_pos", render_backend="none")
+
+    groups = [
+        evaluate_condition(
+            factory,
+            "PickCube-v1",
+            "official-bc",
+            c,
+            list(range(10000, 10005)),
+            100,
+            policy_loader=loader,
+        )
+        for c in [Condition("clean"), Condition("delay", action_delay=2)]
+    ]
+    assert [r.initial_observation_sha256 for r in groups[0]] == [
+        r.initial_observation_sha256 for r in groups[1]
+    ]

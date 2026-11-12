@@ -136,6 +136,12 @@ def main() -> None:
                     on_step=lambda record: traces.write(json.dumps(record) + "\n"),
                 )
         videos.close()
+        _write_jsonl(out / "episodes.jsonl", [to_dict(r) for r in results])
+        hashes = {}
+        for result in results:
+            previous = hashes.setdefault(result.seed, result.initial_observation_sha256)
+            if previous != result.initial_observation_sha256:
+                raise RuntimeError("Paired initial observations differ")
         clean = {r.seed: r for r in results if r.condition == "clean"}
         paired = {}
         for condition in conditions[1:]:
@@ -154,12 +160,6 @@ def main() -> None:
                 ),
             }
         (out / "paired.json").write_text(json.dumps(paired, indent=2) + "\n")
-        hashes = {}
-        for result in results:
-            previous = hashes.setdefault(result.seed, result.initial_observation_sha256)
-            if previous != result.initial_observation_sha256:
-                raise RuntimeError("Paired initial observations differ")
-        _write_jsonl(out / "episodes.jsonl", [to_dict(r) for r in results])
         summaries = summarize(results)
         (out / "summary.json").write_text(json.dumps(summaries, indent=2) + "\n")
         with (out / "summary.csv").open("w", newline="") as handle:
@@ -168,6 +168,7 @@ def main() -> None:
             writer.writerows(summaries)
         manifest = {
             "experiment": "paired-seed separate shifts",
+            "initial_observations_matched": True,
             "runtime": runtime,
             "arguments": vars(args),
             "checkpoint_provenance": provenance,

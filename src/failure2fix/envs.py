@@ -84,6 +84,7 @@ def make_env(
             control_mode=control_mode,
             sim_backend=sim_backend,
             num_envs=1,
+            reconfiguration_freq=1,
             render_mode=render_mode,
             render_backend=render_backend,
         )
