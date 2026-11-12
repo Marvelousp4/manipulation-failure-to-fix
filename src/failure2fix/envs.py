@@ -45,27 +45,51 @@ class ToyReachEnv:
         distance = float(np.linalg.norm(self.target - self.position))
         success = distance <= 0.075
         truncated = self.steps >= self.max_steps and not success
-        return self._obs(), -distance, success, truncated, {
-            "success": success,
-            "distance_to_goal": distance,
-        }
+        return (
+            self._obs(),
+            -distance,
+            success,
+            truncated,
+            {
+                "success": success,
+                "distance_to_goal": distance,
+            },
+        )
 
     def close(self) -> None:
         pass
 
 
-def make_env(env_id: str, obs_mode: str = "state", control_mode: str = "pd_joint_delta_pos"):
+def make_env(
+    env_id: str,
+    obs_mode: str = "state",
+    control_mode: str = "pd_joint_delta_pos",
+    sim_backend: str = "cpu",
+    render_mode: str | None = None,
+    max_episode_steps: int | None = None,
+    render_backend: str = "gpu",
+):
     if env_id == "toy":
         return ToyReachEnv()
     try:
-        import mani_skill.envs  # noqa: F401
         import gymnasium as gym
+        import mani_skill.envs  # noqa: F401
     except ImportError as exc:
         raise RuntimeError(
             "ManiSkill is optional: pip install -e '.[sim]'. Check platform/GPU requirements."
         ) from exc
     try:
-        return gym.make(env_id, obs_mode=obs_mode, control_mode=control_mode)
+        kwargs = dict(
+            obs_mode=obs_mode,
+            control_mode=control_mode,
+            sim_backend=sim_backend,
+            num_envs=1,
+            render_mode=render_mode,
+            render_backend=render_backend,
+        )
+        if max_episode_steps is not None:
+            kwargs["max_episode_steps"] = max_episode_steps
+        return gym.make(env_id, **kwargs)
     except Exception as exc:
         raise RuntimeError(
             f"Could not initialize {env_id!r}; check simulator, observation and control modes."

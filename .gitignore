@@ -9,3 +9,5 @@ dist/
 runs/
 .DS_Store
 .env
+
+.cache/

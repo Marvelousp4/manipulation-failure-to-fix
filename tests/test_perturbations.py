@@ -13,8 +13,10 @@ def test_action_delay_fifo_and_reset():
 
 
 def test_noise_reproducibility_and_integer_preservation():
-    obs = {"state": np.array([1.0, 2.0], dtype=np.float32),
-           "image": np.array([5, 20], dtype=np.uint8)}
+    obs = {
+        "state": np.array([1.0, 2.0], dtype=np.float32),
+        "image": np.array([5, 20], dtype=np.uint8),
+    }
     a = noisy_observation(obs, 0.2, np.random.default_rng(4))
     b = noisy_observation(obs, 0.2, np.random.default_rng(4))
     np.testing.assert_equal(a["state"], b["state"])

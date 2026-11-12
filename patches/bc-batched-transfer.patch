@@ -1,0 +1,18 @@
+diff --git a/examples/baselines/bc/bc.py b/examples/baselines/bc/bc.py
+index 5d5b86c..3b97436 100644
+--- a/examples/baselines/bc/bc.py
++++ b/examples/baselines/bc/bc.py
+@@ -182,6 +182,13 @@ class ManiSkillDataset(Dataset):
+     def __len__(self):
+         return len(self.observations)
+ 
++    def __getitems__(self, indices):
++        # Transfer each batch once; preserve the original samples and collation.
++        obs = torch.as_tensor(self.observations[indices], device=self.device).float()
++        action = torch.as_tensor(self.actions[indices], device=self.device).float()
++        done = torch.as_tensor(self.dones[indices], device=self.device)
++        return list(zip(obs, action, done))
++
+     def __getitem__(self, idx):
+         action = torch.from_numpy(self.actions[idx]).float().to(device=self.device)
+         obs = torch.from_numpy(self.observations[idx]).float().to(device=self.device)

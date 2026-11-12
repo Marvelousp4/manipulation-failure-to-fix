@@ -3,11 +3,17 @@ from failure2fix.evaluation import Condition, evaluate_condition, scalar_bool, s
 
 
 def test_toy_oracle_smoke_clean_and_shifted():
-    clean = evaluate_condition(ToyReachEnv, "toy", "toy-oracle", Condition("clean"),
-                               seeds=[1, 2, 3, 4, 5], max_steps=48)
-    shifted = evaluate_condition(ToyReachEnv, "toy", "toy-oracle",
-                                 Condition("shifted", obs_noise=0.1, action_delay=2),
-                                 seeds=[1, 2, 3, 4, 5], max_steps=48)
+    clean = evaluate_condition(
+        ToyReachEnv, "toy", "toy-oracle", Condition("clean"), seeds=[1, 2, 3, 4, 5], max_steps=48
+    )
+    shifted = evaluate_condition(
+        ToyReachEnv,
+        "toy",
+        "toy-oracle",
+        Condition("shifted", obs_noise=0.1, action_delay=2),
+        seeds=[1, 2, 3, 4, 5],
+        max_steps=48,
+    )
     assert len(clean) == len(shifted) == 5
     assert all(episode.success is True for episode in clean)
     assert {r.seed for r in clean} == {r.seed for r in shifted}
@@ -21,10 +27,20 @@ def test_unknown_success_is_not_inferred_from_termination():
 
 
 def test_repeated_seed_is_reproducible():
-    a = evaluate_condition(ToyReachEnv, "toy", "toy-oracle",
-                           Condition("shifted", obs_noise=0.1, action_delay=3),
-                           seeds=[66], max_steps=48)
-    b = evaluate_condition(ToyReachEnv, "toy", "toy-oracle",
-                           Condition("shifted", obs_noise=0.1, action_delay=3),
-                           seeds=[66], max_steps=48)
+    a = evaluate_condition(
+        ToyReachEnv,
+        "toy",
+        "toy-oracle",
+        Condition("shifted", obs_noise=0.1, action_delay=3),
+        seeds=[66],
+        max_steps=48,
+    )
+    b = evaluate_condition(
+        ToyReachEnv,
+        "toy",
+        "toy-oracle",
+        Condition("shifted", obs_noise=0.1, action_delay=3),
+        seeds=[66],
+        max_steps=48,
+    )
     assert a == b

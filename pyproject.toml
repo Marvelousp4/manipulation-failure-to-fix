@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "manipulation-failure-to-fix"
-version = "0.1.0"
+version = "0.2.0"
 description = "Reproducible manipulation-policy failure evaluation"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,7 +13,7 @@ dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.7"]
-sim = ["gymnasium>=0.29", "mani_skill>=3.0"]
+sim = ["gymnasium==0.29.1", "mani_skill==3.0.1"]
 
 [project.scripts]
 f2f = "failure2fix.cli:main"

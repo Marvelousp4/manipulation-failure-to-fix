@@ -1,12 +1,12 @@
-# Experiment protocol
+# Protocol
 
-**Question:** How do controlled observation noise and action delay affect policy rollouts?
-
-- Compare clean vs shifted with shared seeds; verify initial states match.
-- Record true simulator success; unknown is not failure.
-- Report success, episode length, return, sample count, uncertainty and regressions.
-- Freeze policy/environment; change one variable at a time.
-- `ToyReach` is a smoke test. Noise/delay are interface—not contact—shifts.
-- For research claims: trained policies, multiple tasks, strong baselines, equal budgets.
-
-**Hypotheses (untested):** repairs differ by failure mode; targeted data may outperform random data.
+- Freeze the checkpoint; evaluate 50 identical seeds in three separate conditions.
+- Clean; additive independent Gaussian state noise (sigma 0.01); FIFO action delay (2 control steps).
+- Noise affects every floating state coordinate in native units, without normalization/clipping.
+- Delay starts with zero commands and resets each episode. Controller: `pd_ee_delta_pos`.
+- CPU PhysX, 100-step horizon. Report success at any step and at the last step; termination is not success.
+- Verify exact initial observation hashes across conditions. These do not certify every hidden simulator state.
+- Report Wilson 95% intervals and paired regressions/improvements; unknown success stays null.
+- Fixed final training checkpoint; evaluation seeds 10000–10049 differ from demonstration seeds 0–999.
+- One training seed/task/budget supports a preliminary baseline, not broad robustness claims.
+- Environment factory and policy loader isolate simulator-specific code; future backends use the same evaluator.
