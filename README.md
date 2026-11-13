@@ -19,4 +19,10 @@ F2F_CLEAN_RUN=runs/clean-reproduce bash scripts/run_clean_training.sh
 [Clean review](docs/CLEAN_BASELINE.md) · [Evidence](artifacts/clean-review/) ·
 [Trained DP weights](artifacts/clean-review/dp-20000-ema.pt) · [Preserved v0.2](docs/V02.md).
 
+Replay gate (requires prepared WSL environment):
+```bash
+python scripts/probe_replay_gate.py
+```
+[Research gate](docs/RESEARCH_GAP.md). Gate is **not yet run on ManiSkill**.
+
 License pending IP/open-source review.
