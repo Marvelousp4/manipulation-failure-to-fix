@@ -53,6 +53,7 @@ def load_dp(upstream, checkpoint, device="cuda"):
     import gymnasium as gym
     import torch
 
+    torch.backends.cudnn.deterministic = True
     module = official_dp(upstream)
     args = module.Args()
     env = SimpleNamespace(

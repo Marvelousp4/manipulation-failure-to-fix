@@ -30,7 +30,7 @@ python -m failure2fix.clean audit --upstream "$upstream" \
   --dataset "$root/data/trajectory.state.pd_ee_delta_pos.physx_cpu.h5" \
   --output "$root/corrected-replay" --episodes 50
 # Isolate the official planner's native NumPy dependency from the evaluation environment.
-python -m pip install --target .cache/planner-deps --no-deps numpy==1.26.4 scipy==1.14.1
+python -m pip install --target .cache/planner-deps --upgrade --no-deps numpy==1.26.4 scipy==1.14.1
 PYTHONPATH="$PWD/.cache/planner-deps" python scripts/generate_clean_reference.py \
   --output "$root/reference" --seed 11000 --episodes 50
 python scripts/run_official.py --reconfiguration-freq 1 --module mani_skill.trajectory.replay_trajectory \

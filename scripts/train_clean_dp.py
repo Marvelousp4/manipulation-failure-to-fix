@@ -83,8 +83,15 @@ def configured(*args, **kwargs):
 
 
 gym.make = configured
+
+
 # Ten synchronous CPU scenes avoid multiprocessing memory duplication on the WSL workstation.
-gym.vector.AsyncVectorEnv = lambda factories, **kwargs: gym.vector.SyncVectorEnv(factories)
+class SyncCPUVectorEnv(gym.vector.SyncVectorEnv):
+    def __init__(self, factories, **kwargs):
+        super().__init__(factories)
+
+
+gym.vector.AsyncVectorEnv = SyncCPUVectorEnv
 sys.argv = [
     "train.py",
     "--env-id",

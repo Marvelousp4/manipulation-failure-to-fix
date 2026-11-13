@@ -153,3 +153,75 @@ def test_vector_fixed_horizon_handles_gymnasium_object_info():
     rows = vector_evaluate(Agent(), Env(), [20000, 20001], device="cpu")
     assert rows[0]["success_once_100"] and not rows[1]["success_once_100"]
     assert not rows[0]["success_at_end"] and rows[0]["steps"] == 200
+
+
+def test_selection_uses_validation_success_not_last_checkpoint_or_mse():
+    from failure2fix.clean_selection import best_candidate
+
+    low_loss = dict(
+        updates=100000,
+        validation=dict(success_once=0.66, success_at_end=0.06, training_mse=0.00001),
+    )
+    higher_success = dict(
+        updates=80000, validation=dict(success_once=0.84, success_at_end=0.06, training_mse=0.00004)
+    )
+    assert best_candidate([low_loss, higher_success]) is higher_success
+
+
+def test_selection_rejects_nonvalidation_seeds(tmp_path):
+    import json
+
+    from failure2fix.clean_selection import candidate
+
+    path = tmp_path / "checkpoint.json"
+    path.write_text(
+        json.dumps(
+            dict(summary=dict(updates=10000), episodes=[dict(seed=i) for i in range(40000, 40050)])
+        )
+    )
+    with pytest.raises(ValueError, match="reserved validation seeds"):
+        candidate(path, "bc", tmp_path)
+
+
+def test_test_guard_blocks_reuse_before_policy_or_environment_loading(tmp_path):
+    import hashlib
+    import json
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    checkpoint = tmp_path / "weights.pt"
+    checkpoint.write_bytes(b"guard fixture, never loaded")
+    selection = tmp_path / "selection.json"
+    selection.write_text(
+        json.dumps(
+            dict(
+                selected=dict(
+                    method="bc",
+                    checkpoint=str(checkpoint),
+                    checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),
+                ),
+                test_seeds=list(range(40000, 40100)),
+                horizon=200,
+            )
+        )
+    )
+    guard = selection.with_suffix(".test-started.json")
+    guard.write_text("already consumed")
+    script = Path(__file__).resolve().parents[1] / "scripts/test_clean.py"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            "--selection",
+            str(selection),
+            "--output",
+            str(tmp_path / "output"),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode != 0
+    assert "FileExistsError" in result.stderr
+    assert guard.read_text() == "already consumed"
+    assert not (tmp_path / "output/episodes.json").exists()
