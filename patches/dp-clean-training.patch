@@ -1,0 +1,27 @@
+--- a/examples/baselines/diffusion_policy/train.py
++++ b/examples/baselines/diffusion_policy/train.py
+@@ -260,6 +260,7 @@
+     torch.save({
+         'agent': agent.state_dict(),
+         'ema_agent': ema_agent.state_dict(),
++        'updates': iteration,
+     }, f'runs/{run_name}/checkpoints/{tag}.pt')
+ 
+ if __name__ == "__main__":
+@@ -395,7 +396,7 @@
+     agent.train()
+     pbar = tqdm(total=args.total_iters)
+     last_tick = time.time()
+-    for iteration, data_batch in enumerate(train_dataloader):
++    for iteration, data_batch in enumerate(train_dataloader, start=1):
+         timings["data_loading"] += time.time() - last_tick
+ 
+         # forward and compute loss
+@@ -430,7 +431,6 @@
+         pbar.set_postfix({"loss": total_loss.item()})
+         last_tick = time.time()
+ 
+-    evaluate_and_save_best(args.total_iters)
+     log_metrics(args.total_iters)
+ 
+     envs.close()

@@ -1,0 +1,15 @@
+{
+  "condition": "Run if BC after 100k updates does not meet the recorded clean-baseline targets",
+  "implementation": "Official ManiSkill state Diffusion Policy at upstream 62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3",
+  "architecture": "Unchanged default 4.39M-parameter conditional UNet, obs_horizon=2, act_horizon=8, pred_horizon=16",
+  "optimizer": "Official AdamW, lr=0.0001, cosine schedule, warmup=500, EMA power=0.75",
+  "batch_size": 1024,
+  "training_seed": 1,
+  "updates": 30000,
+  "checkpoint_validation_interval": 10000,
+  "sampler": "Unchanged 100-step DDPM",
+  "validation": "Same seeds 20000-20049, 200-step fixed horizon, ten synchronous CPU scenes",
+  "evaluation_noise_seed": "First environment seed of each fixed batch of ten",
+  "test": "40000-40099 only after validation-based selection; same batch size and sampler",
+  "comparison_limit": "Practical official-baseline comparison; training updates, model size and compute are not matched to BC"
+}

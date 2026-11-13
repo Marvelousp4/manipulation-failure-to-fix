@@ -97,6 +97,8 @@ def rollout(sample_fn, seeds, horizon=200, video_dir=None, video_seeds=()):
         try:
             for seed in seeds:
                 torch.manual_seed(seed)
+                if hasattr(sample_fn, "reset"):
+                    sample_fn.reset(seed)
                 obs, _ = env.reset(seed=seed)
                 initial = as_numpy(obs).copy()
                 cube_z = float(as_numpy(env.unwrapped.cube.pose.p)[0, 2])

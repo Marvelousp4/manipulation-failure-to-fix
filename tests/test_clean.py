@@ -89,3 +89,67 @@ def test_fixed_horizon_and_stochastic_seed_isolation(monkeypatch):
     assert first[0]["steps"] == 3
     assert torch.equal(before, torch.get_rng_state())
     np.testing.assert_array_equal(actions[:3], actions[3:])
+
+
+def test_action_chunk_history_and_episode_reset():
+    torch = pytest.importorskip("torch")
+    from failure2fix.clean_dp import ActionChunks
+
+    class Agent:
+        obs_horizon = 2
+
+        def __init__(self):
+            self.inputs = []
+
+        def get_action(self, obs):
+            self.inputs.append(obs.clone())
+            return torch.arange(8, dtype=torch.float32).reshape(1, 8, 1).repeat(1, 1, 4)
+
+    agent = Agent()
+    policy = ActionChunks(agent, device="cpu")
+    for i in range(9):
+        assert policy(np.full((1, 42), i, dtype=np.float32))[0] == i % 8
+    assert agent.inputs[0][0, :, 0].tolist() == [0, 0]
+    assert agent.inputs[1][0, :, 0].tolist() == [7, 8]
+    policy.reset(3)
+    policy(np.full((1, 42), 99, dtype=np.float32))
+    assert agent.inputs[-1][0, :, 0].tolist() == [99, 99]
+
+
+def test_vector_fixed_horizon_handles_gymnasium_object_info():
+    torch = pytest.importorskip("torch")
+    from failure2fix.clean_dp import vector_evaluate
+
+    class Agent(torch.nn.Module):
+        act_horizon = 8
+
+        def get_action(self, obs):
+            return torch.zeros((2, 8, 4))
+
+    class Env:
+        num_envs = 2
+
+        def reset(self, seed):
+            self.t = 0
+            return np.zeros((2, 2, 42)), {}
+
+        def step(self, action):
+            self.t += 1
+            ep = [
+                dict(success_once=True, success_at_end=False),
+                dict(success_once=False, success_at_end=False),
+            ]
+            return (
+                np.zeros((2, 2, 42)),
+                np.zeros(2),
+                np.zeros(2, bool),
+                np.full(2, self.t == 200),
+                dict(
+                    episode=np.array(ep, dtype=object),
+                    final_info=np.array([dict(episode=e) for e in ep], dtype=object),
+                ),
+            )
+
+    rows = vector_evaluate(Agent(), Env(), [20000, 20001], device="cpu")
+    assert rows[0]["success_once_100"] and not rows[1]["success_once_100"]
+    assert not rows[0]["success_at_end"] and rows[0]["steps"] == 200
