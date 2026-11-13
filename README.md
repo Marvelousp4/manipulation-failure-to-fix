@@ -26,5 +26,6 @@ python scripts/probe_replay_gate.py
 [Research gate](docs/RESEARCH_GAP.md). Gate A passed exact replay.
 [Gate B](docs/GATE_B.md): paired impulse pilot passed; no repair algorithms.
 [Gate B2](docs/GATE_B2.md): confirmation stopped on native contact fingerprints; Gate C NO-GO.
+[Gate B2a](docs/GATE_B2A.md): representation artifact diagnosed; original stop retained.
 
 License pending IP/open-source review.
