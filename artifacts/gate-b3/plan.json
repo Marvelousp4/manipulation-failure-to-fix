@@ -1,0 +1,50 @@
+{
+  "gate": "B3 physically interpretable failure feasibility; exploratory development only",
+  "base_commit": "d78aadd6714a72df2881cb476dde4f5b19bc1192",
+  "seeds": [
+    80000,
+    80001,
+    80002,
+    80003,
+    80004,
+    80005,
+    80006,
+    80007,
+    80008,
+    80009,
+    80010,
+    80011
+  ],
+  "excluded_prior_ranges": [
+    [
+      0,
+      79999
+    ]
+  ],
+  "api_only_smoke_test_seed": 90000,
+  "impulses_Ns": [
+    0.064,
+    0.128,
+    0.192
+  ],
+  "checkpoint": "artifacts/clean-review/dp-20000-ema.pt",
+  "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "frozen": "Official DP 20k EMA, PickCube-v1 state, pd_ee_delta_pos, 200 steps, 20 Hz controller, CPU PhysX/renderer, CUDA policy, original sustained grasp trigger and native one-shot world +x COM impulse; action chunks/history/RNG unchanged",
+  "historical_status": "B2 and B2b STOPPED; B2a accepted diagnosis only; no confirmation resumed and Gate C not authorized here",
+  "geometry": "Read cube/table box half sizes and local poses, floor plane and body poses from native collision API. Full 15-axis OBB SAT penetration and convex projected-footprint clipping against finite tabletop rectangle. Floor halfspace penetration uses native plane +x normal transformed to world. Geometric arithmetic epsilon 1e-8 m; no cube-center departure threshold. Report full/partial/no footprint overlap, active native support and contact-free ballistic flags separately.",
+  "ballistic": "No nonzero native cube-contact impulse and native per-step delta velocity matches gravity*dt at atol=rtol=1e-4. Instantaneous kick step is not used as proof of ballistic motion.",
+  "physical_stops": "Any nonfinite exact data; any native cube-contact separation below -0.005 m over full horizon; geometric table-box or floor-halfspace penetration above 0.005 m over full horizon; nonzero cube linear damping; first-step inferred unreported contact impulse exceeds material friction envelope by >0.0002+0.005*J N s. Departures and valid free falls are NOT invalidity and remain in all outcome denominators. Stop at first genuine invalidity, unsupported geometry, sham/replay mismatch or unexpected execution error; capture failed pair/partial evidence and recommend C/PIVOT, without retuning.",
+  "pairing": "Existing corrected exact all-scene native manifold comparison, full point multiplicity/precision/zero signs, before/after physics states/controller/global RNG; exact control obs/history/queue/RNG and inference schedule. Disturbance prefixes checked through pre-impulse command/substep; independent reset/replay, never snapshot restore.",
+  "order": "All 12 clean/sham pairs first, require >=11/12 clean final successes without excluding any seed. Then each fixed severity on all seeds in ascending order. Then first three seeds repeated at all five branches at 100 Hz, followed by fixed timestep audit. No other severities or seed replacement.",
+  "loss": "Record any post-event grasp loss plus sustained loss (three consecutive false reports). Early verified loss onset within first ten control steps after kick is required for regime eligibility. Verified regrasp is first three true reports after sustained loss; completion first five successes; onset latencies, horizon right censoring. Overall failures adjudicated at step 200, not assigned an invented early failure time. Record grasp-loss/departure order, acknowledging 20 Hz loss-observation interval ambiguity.",
+  "workspace": "Operational support workspace uses finite native tabletop geometry: departure if projected cube collision footprint is completely outside OR every cube collision vertex is below the tabletop plane. The latter catches below-rim falls with residual side projection overlap. No center threshold. Departures ever, even if returned, stay in all 12-seed outcome rates. Record temporal order of grasp loss and departure with control-sampling ambiguity; final task failure only adjudicated at step 200.",
+  "A_eligibility": "At a fixed severity: all 12 evaluated, at least two clean-success paired cases with early sustained loss, verified regrasp, final success and NO departure ever; at least two clean-success paired cases with early sustained loss, final noncompletion and NO departure ever; at most four departures among all 12. Lowest eligible severity is exploratory candidate. No confirmatory significance test or severity re-selection.",
+  "fixed_timestep_audit": "First three seeds, all five branches at 100/200/400 Hz physics, control 20 Hz. 100 Hz data come from original pilot. Each frequency has own paired clean/sham; do not claim identical pre-kick states across frequencies. Compare three disturbed triples per seed, nine total, and report pre-kick pose/trigger/queue differences.",
+  "large_timestep_change": "For any pair of frequencies: different final success, ever-departure or sustained-loss/regrasp qualitative category; OR norm difference in paired impulse-minus-clean response at common +50 ms exceeds 0.01 m position or max(0.5 m/s,50% of maximum response-vector speed) velocity. First single-substep responses are recorded but not compared as equal-time measures.",
+  "C_timestep": "At least two of nine fixed disturbed triples unstable, or any fine-rate clean noncompletion, implies C/PIVOT. Pre-event differences are documented as confounding physical-vs-policy attribution; never describe changes as causal policy recovery effects.",
+  "candidate_audit": "Only if candidate exists and fixed audit is not C: first eligible recovered seed and first eligible in-workspace noncompleted seed. Repeat clean/sham/candidate at 100 Hz and audit at 200/400 Hz unless already in first-three fixed audit. Any key-case instability implies C. Exact repeats required. No extra seed search.",
+  "decision": "A/CONTINUE only if candidate and all validity/repeat/key-case audits pass. C/PIVOT for genuine invalidity, reproducibility failure or preregistered timestep instability. Otherwise B/PIVOT because no suitable nontrivial mixed in-workspace regime. For B/C explicitly abandon the current instantaneous +x COM impulse configuration for recovery research; recommend a different mechanism/setup rather than another debugging gate.",
+  "videos": "First seed live at each 100 Hz branch. No outcome-chosen reruns after a stop. All physical response/displacement/support/ballistic timelines, native penetration, regrasp and completion, queue length and first updated-observation inference saved. Repeat/timestep cases do not increase n=12.",
+  "offline_validation": "Use only archived B2b seed 70001; reconstruct native primitives and require original geometry SHA256 matches, use archived per-physics table/cube poses. No old seed simulation or policy replay. API smoke test 90000 has two zero-action steps, no policy inference/research outcome.",
+  "execution": "Commit and push protocol plus tested implementation before any 80000-80011 policy rollout. Clean committed source and new output directory required. No new model, task, repair or training. No real-world collision-fidelity claim. Full cases persisted before validity check so stopped/ejected cases are not silently dropped. No automatic resume."
+}

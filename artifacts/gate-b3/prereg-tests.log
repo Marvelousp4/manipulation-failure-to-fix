@@ -1,0 +1,10 @@
+........................................................................ [ 88%]
+.........                                                                [100%]
+=============================== warnings summary ===============================
+tests/test_gate_b3.py: 2 warnings
+tests/test_maniskill.py: 601 warnings
+  /home/marvelousp4/projects/manipulation-failure-to-fix/.venv/lib/python3.12/site-packages/mani_skill/agents/base_agent.py:328: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+    if np.isnan(action).any():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+81 passed, 603 warnings in 13.26s
