@@ -49,3 +49,9 @@ Do not conflate failure prediction with intervention benefit. Compare **multiple
 **Kill / pivot:** no reproducible mid-trajectory replay, no meaningful heterogeneous failures, repair methods perform identically, or closest prior art already covers the result. Stop without inventing an architecture.
 
 **Quality gate:** one held-out falsifiable finding + executable experiment + honest limitations. Algorithm/paper novelty remains unestablished. Public repo needs IP/license review; large artifacts should use Releases/LFS/external storage rather than repeated binary commits.
+
+## Replay gate (implementation only)
+```bash
+python scripts/probe_replay_gate.py
+```
+Replays frozen 20k-EMA DP with new seeds 50000–50002; compares actions, observations, rigid-body states, controller state, contact flags and continuations. **No ManiSkill execution result yet.** Passing verifies deterministic re-simulation, not arbitrary snapshot restoration.
