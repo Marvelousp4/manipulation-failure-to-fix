@@ -1,0 +1,22 @@
+{
+  "artifacts/SHA256SUMS": {
+    "pass": true,
+    "files": 25
+  },
+  "artifacts/clean-review/SHA256SUMS": {
+    "pass": true,
+    "files": 125
+  },
+  "artifacts/gate-b/SHA256SUMS": {
+    "pass": true,
+    "files": 72
+  },
+  "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "source_commit_executed": "c09e6fa36f195af120e7576bf6a556434fc718a6",
+  "exit_code": 1,
+  "completed_rollouts": 4,
+  "stored_rollout_payloads": 3,
+  "nonzero_impulse_rollouts": 0,
+  "stop": "Native contact fingerprint inequality at sham seed 60001; recorded state/action/grasp/success/policy/RNG comparisons matched exactly",
+  "failure_payload_limitation": "Original runner did not persist failing sham; only failed check and matching state comparison retained. Fixed capture after stopping; no diagnostic or confirmation rerun."
+}

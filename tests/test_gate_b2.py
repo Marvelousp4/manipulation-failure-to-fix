@@ -105,3 +105,31 @@ def test_native_contact_impulses_and_friction_account_for_momentum(friction):
         np.testing.assert_allclose(residual, 0, atol=1e-5)
     else:
         assert abs(residual[0]) > 0.001  # Native normal impulses omit tangential friction.
+
+
+def test_failure_evidence_retains_both_pairs_and_first_contact_mismatch(tmp_path):
+    import gzip
+    import json
+
+    from failure2fix.gate_b2 import contact_mismatch, retain_failure
+    from failure2fix.replay_gate import Frame
+
+    reference = dict(event_index=0, full_fingerprints=["a", "b"], _substeps=[0, 1])
+    actual = dict(event_index=0, full_fingerprints=["a", "c"], _substeps=[0, 2])
+    mismatch = contact_mismatch(reference, actual)
+    assert mismatch["first_substep"] == 1
+    assert mismatch["reference"] == 1 and mismatch["actual"] == 2
+    frame = Frame(0, None, {"obs": np.zeros(2)}, False, False)
+    run = dict(seed=60001, frames=[frame])
+    path = tmp_path / "failure.json.gz"
+    retain_failure(path, (run, reference), (run, actual))
+    evidence = json.loads(gzip.decompress(path.read_bytes()))
+    assert evidence["actual"]["audit"]["_substeps"] == [0, 2]
+    assert evidence["reference"]["frames"][0]["state"]["obs"] == [0, 0]
+
+
+def test_strict_fingerprint_can_differ_for_numerically_equal_signed_zero():
+    from failure2fix.gate_b2 import canonical
+
+    assert np.array_equal(np.array([-0.0]), np.array([0.0]))
+    assert canonical([-0.0]) != canonical([0.0])

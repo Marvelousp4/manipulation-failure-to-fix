@@ -1,0 +1,9 @@
+b3ab144ea869d4bd1643ae16f7021fc3f1e51915107599a046cb76becdb2ddca  artifacts/gate-b2/confirmation-v1/config.json
+874ab2a78e081f3d303b46df39df5d58eda5b56f368d983bd613c9f952e4e5bc  artifacts/gate-b2/confirmation-v1/records/100-clean-60000.json.gz
+cbf9e1ad5c85f36e1ce86e0dea9da1e42e17b29acb4740de71e5e615a75cf849  artifacts/gate-b2/confirmation-v1/records/100-clean-60001.json.gz
+650e4f1e338849afba322c5af44bf5d3c8f7f0686443fd8534e36b2456e4f278  artifacts/gate-b2/confirmation-v1/records/100-sham-60000.json.gz
+eed332c7b275efc3937ddea38dcb9b1b09279b4c7d8aa90dacf9b8cfdaffd8e9  artifacts/gate-b2/confirmation-v1/summary.json
+e493de03894098891c499ac050b51befe03b1cf7816137c956a7533b8b11280d  artifacts/gate-b2/integrity.json
+c6e6cf8e60640359abc126b67928a05c311f7266c7fc61d0558e390f116a65ea  artifacts/gate-b2/plan.json
+95537caf1fd05d89a68a8cbaea7c2e27453bf1ad11d364546a009d75ac116d04  artifacts/gate-b2/run.log.gz
+21bc4540398fb24f9a25a76b8de8447956f9cdc97ead5d1acf12b1a0b802a6d4  artifacts/gate-b2/tests.log

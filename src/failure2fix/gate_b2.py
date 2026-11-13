@@ -160,6 +160,42 @@ def compare_contact(a, b, prefix=False):
     return a["full_fingerprints"][:n] == b["full_fingerprints"][:n]
 
 
+def contact_mismatch(reference, actual, prefix=False):
+    """Explain strict fingerprint failure without relaxing the preregistered check."""
+    n = reference["event_index"] if prefix else len(reference["full_fingerprints"])
+    left, right = reference["full_fingerprints"][:n], actual["full_fingerprints"][:n]
+    index = next((i for i, (a, b) in enumerate(zip(left, right)) if a != b), None)
+    if index is None and len(left) != len(right):
+        index = min(len(left), len(right))
+    if index is None:
+        return None
+    result = dict(first_substep=index, reference_length=len(left), actual_length=len(right))
+    for name, audit in [("reference", reference), ("actual", actual)]:
+        substeps = audit.get("_substeps", [])
+        result[name] = substeps[index] if index < len(substeps) else None
+    return result
+
+
+def retain_failure(path, reference, actual):
+    """Persist the failed pair before process exit; never rerun it implicitly."""
+    import gzip
+    from pathlib import Path
+
+    def encode(pair):
+        if pair is None:
+            return None
+        run, audit = pair
+        return dict(
+            run={k: v for k, v in run.items() if k != "frames"},
+            frames=[vars(frame) for frame in run["frames"]],
+            audit=audit,
+        )
+
+    Path(path).write_bytes(
+        gzip.compress(canonical(dict(reference=encode(reference), actual=encode(actual))), mtime=0)
+    )
+
+
 def paired_effect(clean, actual):
     """Conservative paired risk-difference CI, including zero discordances."""
     from scipy.stats import beta, binomtest

@@ -24,8 +24,10 @@ from failure2fix.gate_b2 import (
     canonical,
     chunk_association,
     compare_contact,
+    contact_mismatch,
     latency_summary,
     paired_effect,
+    retain_failure,
 )
 
 
@@ -66,6 +68,7 @@ def main():
     )
     write(out / "config.json", config)
     rows = []
+    last_attempt, last_reference = None, None
     tags = [("clean", 0.0), ("sham", 0.0), ("J0.256", 0.256), ("J0.064", 0.064), ("J0.128", 0.128)]
 
     def require(ok, **detail):
@@ -74,6 +77,8 @@ def main():
             raise RuntimeError(f"STOP: {detail}")
 
     def execute(seed, tag, impulse, trigger=None, freq=100, video=None):
+        nonlocal last_attempt, last_reference
+        last_attempt, last_reference = None, None
         import gymnasium as gym
         import mani_skill.envs  # noqa: F401
 
@@ -98,6 +103,8 @@ def main():
         branch = tag if tag in ["clean", "sham"] else "disturbance"
         run = run_branch(factory, agent, seed, branch, impulse, trigger, 200, video)
         contact = audit.evidence(run)
+        contact["_substeps"] = audit.rows
+        last_attempt = (run, contact)
         require(
             contact["valid"],
             kind="contact-validity",
@@ -111,6 +118,8 @@ def main():
         return run, contact
 
     def paired(clean, actual, tag, seed, freq=100):
+        nonlocal last_reference
+        last_reference = clean
         c, ca = clean
         a, aa = actual
         sham = tag == "sham"
@@ -126,6 +135,7 @@ def main():
         require(
             compare_contact(ca, aa, prefix=not sham),
             kind="native-contact-equivalence",
+            mismatch=contact_mismatch(ca, aa, prefix=not sham),
             tag=tag,
             seed=seed,
             freq=freq,
@@ -169,7 +179,9 @@ def main():
                     state_sha256=hashlib.sha256(canonical(frame.state)).hexdigest(),
                 )
             )
-        public_audit = {k: v for k, v in audit.items() if k != "full_fingerprints"}
+        public_audit = {
+            k: v for k, v in audit.items() if k not in ["full_fingerprints", "_substeps"]
+        }
         public_audit["full_contact_trace_sha256"] = hashlib.sha256(
             canonical(audit["full_fingerprints"])
         ).hexdigest()
@@ -266,6 +278,7 @@ def main():
             for tag, impulse in tags:
                 reference = load(seed, tag)
                 repeated = execute(seed, tag, impulse, reference[0]["trigger"])
+                last_reference = reference
                 check = compare_branches(reference[0], repeated[0])
                 require(
                     check["pass"] and compare_contact(reference[1], repeated[1]),
@@ -294,6 +307,7 @@ def main():
                     reference[0]["trigger"],
                     video=out / "videos" / f"{seed}-{tag}.mp4",
                 )
+                last_reference = reference
                 require(
                     compare_branches(reference[0], repeated[0])["pass"]
                     and compare_contact(reference[1], repeated[1]),
@@ -337,6 +351,11 @@ def main():
         status.update(
             status="STOP", validity_pass=False, gate_C="NO-GO", error=f"{type(exc).__name__}: {exc}"
         )
+        if last_attempt is not None:
+            try:
+                retain_failure(out / "failure-pair.json.gz", last_reference, last_attempt)
+            except Exception as capture_error:
+                status["failure_capture_error"] = str(capture_error)
         raise
     finally:
         write(out / "summary.json", status)
