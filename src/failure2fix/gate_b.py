@@ -141,7 +141,15 @@ def validate_impulse_api(impulses):
 
 
 def run_branch(
-    env_factory, agent, seed, branch, impulse=0.0, trigger=None, horizon=200, video=None
+    env_factory,
+    agent,
+    seed,
+    branch,
+    impulse=0.0,
+    trigger=None,
+    horizon=200,
+    video=None,
+    capture=None,
 ):
     import torch
 
@@ -163,6 +171,8 @@ def run_branch(
         old_after = env.unwrapped._after_simulation_step
         records = [state_frame(env, obs, None, 0, {}, policy)]
         grasp_run = 0
+        if capture is not None:
+            capture.update(frames=records, inference_steps=policy.inferences)
 
         def before():
             nonlocal event
@@ -185,6 +195,8 @@ def run_branch(
                     control_dt_s=env.unwrapped.control_timestep,
                     physical_api_called=branch != "clean",
                 )
+                if capture is not None:
+                    capture["event"] = event
                 if branch != "clean":
                     event["physics"] = physical_impulse(body, 0.0 if branch == "sham" else impulse)
                 else:
@@ -220,12 +232,21 @@ def run_branch(
                 if not np.isfinite(action).all():
                     raise RuntimeError("Nonfinite policy action")
                 substep = 0
+                if capture is not None:
+                    capture.update(
+                        control_step=current_step,
+                        selected_action=action.copy(),
+                        policy_state=policy.state(),
+                        rng_state=rng_state(),
+                    )
                 obs, _, _, truncated, info = env.step(action)
                 frame = state_frame(env, obs, action, current_step, info, policy)
                 records.append(frame)
                 grasp_run = grasp_run + 1 if frame.grasped else 0
                 if branch == "clean" and trigger is None and grasp_run >= 3:
                     trigger = current_step
+                    if capture is not None:
+                        capture["trigger"] = trigger
                     if horizon - trigger < 8:
                         raise RuntimeError("Insufficient continuation after sustained grasp")
                 if writer:

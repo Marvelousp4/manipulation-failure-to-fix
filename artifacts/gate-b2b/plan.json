@@ -1,0 +1,48 @@
+{
+  "gate": "B2b independently preregistered corrected confirmation",
+  "base_commit": "f60cfb6a4aded2c70a97def133851faf1e608856",
+  "checkpoint": "artifacts/clean-review/dp-20000-ema.pt",
+  "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "seeds": {
+    "first": 70000,
+    "count": 50
+  },
+  "excluded_prior_ranges": [
+    [
+      0,
+      69999
+    ]
+  ],
+  "branches": [
+    "clean",
+    "sham",
+    "J0.256",
+    "J0.064",
+    "J0.128"
+  ],
+  "primary": "J0.256 minus paired clean final success at control step 200; sham is a validity control",
+  "secondary": "J0.064 and J0.128 at the same seeds; no severity selection",
+  "environment": "PickCube-v1, state, pd_ee_delta_pos, CPU PhysX and renderer, simulation 100 Hz/control 20 Hz, horizon 200",
+  "trigger": "Gate B: first three consecutive post-step grasp reports, then impulse after selecting next normal action and before first physics substep",
+  "intervention": "native one-shot +x COM impulse, N s; unchanged frozen official DP and action queue",
+  "pairing": "Exact corrected clean/sham full-horizon checks; exact disturbance prefix including pre-impulse substep. Unchanged action queue/history/inference cadence and common policy random streams throughout.",
+  "order": "all 50 clean/sham pairs before disturbances; all seeds at primary then secondary severities; no seed exclusions or replacement",
+  "contact_audit": "Read-only signed native normal contact impulses (tangential friction is not exposed by this SAPIEN API), material coefficients, separation/normal/position, measured cube pose/linear/angular velocity. Infer net contact impulse from momentum change minus known external impulse and gravity; report separately from measured native normal impulses.",
+  "audit_window": "two control steps before event through ten event/continuation control steps (0.5 s from kick); full physics-step contact fingerprints retained for equivalence verification",
+  "physical_stop": "nonfinite state/contact; minimum cube bottom or contact separation below -0.005 m in audit window; inferred unreported contact impulse exceeds sum(max(pair static/dynamic friction)*reported normal impulse magnitude) by >0.0002 + 0.005*J N s on first substep; nonzero cube linear damping; no paired displacement >1e-6 m within 0.5 s at primary across all seeds. Friction-envelope compatibility is necessary, not a complete solver validity proof.",
+  "resolution_audit": "first three seeds, 200 and 400 Hz physics with control 20 Hz, clean/sham/J0.256; independently paired prefixes at each frequency, same physical validity thresholds; report response and outcome sensitivity, do not pool with primary",
+  "interpretability_stop": "any physical_stop violation at any audited frequency; or inability to read/verify contact response. Stop without retuning physics or thresholds. Finer-timestep outcome differences alone imply sensitivity rather than invalidity",
+  "repeat": "First five seeds, all five branches at 100 Hz; corrected exact full-horizon contact/dynamics/policy comparison; stop at first mismatch",
+  "videos": "Record first seed live in clean, sham and each fixed severity so early-stop evidence can include video. If complete, also rerun clean/sham/primary for first seed, first primary regression, first primary preserved success and first successful regrasp, deduplicated, requiring exact checks. No reruns after stop.",
+  "metrics": "final success, paired regressions/improvements, any post-event grasp loss and early loss within ten control steps, first sustained regrasp (three reports), first stable completion (five success reports), onset latencies and censored failures; conditional observed medians plus Kaplan-Meier median with verified-onset cutoff at horizon-2 or horizon-4",
+  "uncertainty": "success and loss Wilson 95%; paired risk difference conservative >=95% CI from Bonferroni simultaneous 97.5% exact Clopper-Pearson intervals for discordant improvement/regression probabilities, subtract endpoints; primary two-sided exact discordant binomial test, no secondary significance claims; repetitions and resolution audit do not increase n=50",
+  "chunk_association": "exploratory Spearman ranks of remaining queued-action duration versus final success, early grasp loss and observed completion latency; fixed strata 0-3 vs 4-7 queued commands; no schedule manipulation, causal inference or exclusion of censored cases from outcome rates",
+  "gate_C_GO": "all validity/repeat/video checks pass; primary paired risk-difference upper 95% bound <0, at least five primary regressions and five preserved successes, measured primary displacement; otherwise NO-GO pending further evidence. GO scope limited to this idealized simulated near-table fault",
+  "limitations": "one policy/task/direction, idealized uncalibrated impulse; near-table phase; contact-offset/solver/timestep sensitivity; conditional regrasp selection; no real-world impact, novelty or repair-benefit claim",
+  "execution": "Publish tested code, machine plan and docs/GATE_B2B_PLAN.md before any 70000-70049 execution; clean committed source required; new output path; no tuning or replacement seeds",
+  "audit_calibration": "Before confirmation, synthetic table contact demonstrates native impulses omit friction and verifies momentum normal component; frictionless synthetic contact closes full momentum. No confirmation seeds or trained-policy rollouts used in development.",
+  "historical_verdicts": "B2 STOPPED and B2a representation-artifact diagnosis unchanged; Gate C NO-GO until B2b passes",
+  "corrected_validity": "All scene native contact manifolds, canonical body-pair orientation, logical unique body name/component/shape index/typed geometry and material digest. Sort complete typed point records and manifolds, retaining empty manifolds, duplicates, inactive points and signed-zero bits. Exact dtype/shape/byte equality; no numeric tolerance. Exact env/controller/global RNG before/after every physics substep. Exact control-frame observations/state/policy buffers/RNG, pre-impulse selected command, and inference schedule; same policy code runs only at control boundaries.",
+  "criterion_change_justification": "B2a proved pointer-ordered manifold enumeration plus incomplete sort ties altered legacy hashes without changing native point multisets or dynamics. Only representation equivalence is corrected; numeric precision/geometry/multiplicity are retained. Physical thresholds and statistical decision rule are unchanged; scene scope and substep checks are strengthened.",
+  "failure_capture": "Every stop writes typed-array failure-pair.json.gz, including nonfinite bit patterns; partial frames/actions/policy/RNG and physics data if execution aborted mid-rollout, explicit null reference before any pair exists. No implicit resume."
+}
