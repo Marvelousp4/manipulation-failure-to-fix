@@ -1,0 +1,18 @@
+{
+  "success_once": {
+    "successes": 100,
+    "episodes": 100,
+    "wilson95": [
+      0.9630065017930143,
+      1
+    ]
+  },
+  "success_at_end": {
+    "successes": 100,
+    "episodes": 100,
+    "wilson95": [
+      0.9630065017930143,
+      1
+    ]
+  }
+}

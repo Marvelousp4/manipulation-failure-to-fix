@@ -1,0 +1,7 @@
+{
+  "initial_grasp_flags": 999,
+  "episodes": 1000,
+  "first_action_mse_original": 3.992843994637951e-05,
+  "first_action_mse_corrected_flag": 7.444587390637025e-05,
+  "mean_action_change": 0.014422580599784851
+}

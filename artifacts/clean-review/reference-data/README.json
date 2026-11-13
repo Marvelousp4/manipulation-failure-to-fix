@@ -1,0 +1,9 @@
+{
+  "scope": "Frozen diagnostic held-out expert references, never used for optimization or checkpoint selection",
+  "seeds": [
+    11000,
+    11049
+  ],
+  "solver": "Official ManiSkill motion planner",
+  "regeneration": "scripts/generate_clean_reference.py; native planner regeneration is not promised byte-identical"
+}

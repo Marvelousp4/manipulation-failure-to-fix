@@ -1,0 +1,86 @@
+{
+  "matched": true,
+  "episodes": [
+    {
+      "seed": 20000,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20001,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20002,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20003,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20004,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20005,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20006,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20007,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20008,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    },
+    {
+      "seed": 20009,
+      "success_once": true,
+      "success_at_end": true,
+      "success_once_100": true,
+      "steps": 200,
+      "vector_batch_seed": 20000
+    }
+  ],
+  "scope": "Repeated validation seeds; not additional test evidence"
+}

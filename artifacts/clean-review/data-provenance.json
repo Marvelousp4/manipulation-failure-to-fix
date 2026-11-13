@@ -1,0 +1,14 @@
+{
+  "raw_sha256": "03ca60546541a7f18321d9d32721f0254bc75217828c0cadacd217d0c014576a",
+  "original_processed_sha256": "853fa624e06faa5ee42aff6f539677e06bc44cf108775b8fd6c73cd544982908",
+  "corrected_processed_sha256": "ae22f4fee171fbf75cab6e42b161510e41b0306cf5cf2ed71ba766b735f366e2",
+  "source_revision": "d674485bbffdd533914e52d272fdda34c0515608",
+  "reconfiguration_freq": 1,
+  "episodes": 1000,
+  "frames": 77976,
+  "control_mode": "pd_ee_delta_pos",
+  "sim_backend": "cpu",
+  "horizon": 200,
+  "initial_grasp_flags_original": 999,
+  "initial_grasp_flags_corrected": 0
+}

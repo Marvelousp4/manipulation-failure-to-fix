@@ -1,0 +1,11 @@
+{
+  "command": "evaluate",
+  "upstream": ".cache/clean-ManiSkill",
+  "checkpoint": "runs/clean-bc-100k/checkpoints/80000.pt",
+  "dataset": "runs/clean-review/data/trajectory.state.pd_ee_delta_pos.physx_cpu.h5",
+  "output": "runs/clean-review/bc-selected-train",
+  "seed": 0,
+  "episodes": 50,
+  "horizon": 200,
+  "videos": 0
+}

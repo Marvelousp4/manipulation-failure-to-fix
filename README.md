@@ -1,25 +1,22 @@
 # Manipulation Failure-to-Fix
 
-v0.2: official ManiSkill state BC, paired clean/noise/delay evaluation, provenance and videos.
+Reproducible manipulation-policy failure research. Robustness experiments are paused.
+
+Clean PickCube reference: official Diffusion Policy, selected at 20k updates, **100/100**
+untouched test successes and **100/100** successes retained at step 200.
+BC trained through 100k improves substantially but still has poor goal retention.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-sim.txt
+pip install -r requirements-clean.txt
 pip install -e '.[dev]'
 pytest -q
-F2F_SIM_TESTS=1 pytest -q tests/test_maniskill.py
-bash scripts/train_bc.sh
-bash scripts/evaluate_bc.sh
+F2F_CLEAN_RUN=runs/clean-reproduce bash scripts/prepare_clean.sh
+F2F_CLEAN_RUN=runs/clean-reproduce bash scripts/run_clean_training.sh
 ```
 
-Uses GPU training, CPU physics and CPU Vulkan rendering on WSL. Training: all 1,000 official
-motion-planning demonstrations, seed 1, 10,000 updates. Evaluation: 50 paired seeds per condition.
-`runs/` contains JSONL traces, metrics, configuration and MP4 videos. `artifacts/` records provenance.
-The included BC patch batches GPU transfers without changing training samples.
-Gymnasium 0.29.1 is required by the pinned official baseline's evaluation interface.
+[Clean review](docs/CLEAN_BASELINE.md) · [Evidence](artifacts/clean-review/) ·
+[Trained DP weights](artifacts/clean-review/dp-20000-ema.pt) · [Preserved v0.2](docs/V02.md).
 
-Recorded clean success: **2/50 (4%)**; too weak for strong shift conclusions.
-
-[Protocol](docs/PROTOCOL.md) · [v0.2 evidence](docs/V02.md).
-ToyReach remains a smoke test. License pending IP/open-source review.
+License pending IP/open-source review.

@@ -1,0 +1,115 @@
+{
+  "unique_test_seeds": 100,
+  "test_checkpoint_unchanged": true,
+  "selected_by_validation_only": true,
+  "test_guard": "selection.test-started.json",
+  "full_tests_passed": 22,
+  "legacy_artifact_hashes_unchanged": true,
+  "videos": {
+    "dp10k-validation-videos/0.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "phase-videos/11038.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "phase-videos/6.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "phase-videos/34.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "phase-videos/0.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/8.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/7.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/4.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/5.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/3.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/6.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/1.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/2.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/0.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "test/videos/9.mp4": {
+      "frames": 201,
+      "playback_fps": 30.0,
+      "simulation_control_hz": 20
+    },
+    "v02-heldout/videos/11000.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "v02-heldout/videos/11001.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "v02-train/videos/1.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "v02-train/videos/0.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "bc80k-video/videos/20000.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    },
+    "bc80k-video/videos/20001.mp4": {
+      "frames": 200,
+      "playback_fps": 20.0,
+      "simulation_control_hz": 20
+    }
+  }
+}

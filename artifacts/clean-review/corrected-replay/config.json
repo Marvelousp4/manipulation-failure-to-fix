@@ -1,0 +1,11 @@
+{
+  "command": "audit",
+  "upstream": ".cache/clean-ManiSkill",
+  "checkpoint": "artifacts/bc-pickcube.pt",
+  "dataset": "runs/clean-review/data/trajectory.state.pd_ee_delta_pos.physx_cpu.h5",
+  "output": "runs/clean-review/corrected-replay",
+  "seed": 11000,
+  "episodes": 50,
+  "horizon": 200,
+  "videos": 0
+}

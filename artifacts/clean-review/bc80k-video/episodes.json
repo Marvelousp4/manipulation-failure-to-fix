@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 20000,
+    "success_once": false,
+    "success_at_end": false,
+    "success_once_100": false,
+    "success_at_100": false,
+    "grasped_once": true,
+    "lifted": true,
+    "reached_goal_once": false,
+    "min_tcp_distance": 0.004940944258123636,
+    "clipped_action_steps": 125,
+    "steps": 200,
+    "initial_observation_sha256": "fa5f65aed42141906cb958b938287d24465a458d4585359eff3087380b75427a",
+    "failure_phase": "transport"
+  },
+  {
+    "seed": 20001,
+    "success_once": true,
+    "success_at_end": false,
+    "success_once_100": true,
+    "success_at_100": false,
+    "grasped_once": true,
+    "lifted": true,
+    "reached_goal_once": true,
+    "min_tcp_distance": 0.0037494651041924953,
+    "clipped_action_steps": 57,
+    "steps": 200,
+    "initial_observation_sha256": "3eb0a0aa0dd4d3d44eb3cb342286995c8a972ba23cd126af832028cfe7453251",
+    "failure_phase": "success"
+  }
+]

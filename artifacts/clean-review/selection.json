@@ -1,0 +1,573 @@
+{
+  "selected": {
+    "method": "dp",
+    "updates": 20000,
+    "checkpoint": "runs/clean-dp-30k/checkpoints/20000.pt",
+    "checkpoint_sha256": "7fd9ffdfedb5a779be65bbb742a36630c423cc092c4f6aeb7ebbe38643972afd",
+    "validation": {
+      "updates": 20000,
+      "episodes": 50,
+      "success_once": 1.0,
+      "success_at_end": 1.0,
+      "success_once_100": 1.0
+    }
+  },
+  "candidates": [
+    {
+      "method": "bc",
+      "updates": 10000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/10000.pt",
+      "checkpoint_sha256": "53f1475e1f40bf5ec016de449dac4a9a8867513ea71a0615494ea8bca9a88e5c",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.02,
+        "success_at_end": 0.0,
+        "success_once_100": 0.02,
+        "phases": {
+          "grasp": 16,
+          "transport": 20,
+          "placement/settling": 3,
+          "control/reach": 10,
+          "success": 1
+        },
+        "updates": 10000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 0.0006853035883978009,
+          "per_action_mse": [
+            2.517764369258657e-05,
+            5.0857408496085554e-05,
+            9.478033462073654e-05,
+            0.002570368582382798
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.011822802014648914
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.0011157809058204293,
+          "per_action_mse": [
+            2.5007733711390756e-05,
+            5.279144534142688e-05,
+            9.434360981686041e-05,
+            0.004290981218218803
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.011293156072497368
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 20000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/20000.pt",
+      "checkpoint_sha256": "adda572b07fcad08e35eb41645fa314e62198ca2453682f290337fa70d7f297b",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.1,
+        "success_at_end": 0.02,
+        "success_once_100": 0.06,
+        "phases": {
+          "transport": 28,
+          "grasp": 7,
+          "control/reach": 8,
+          "placement/settling": 2,
+          "success": 5
+        },
+        "updates": 20000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 0.00029878836357966065,
+          "per_action_mse": [
+            1.8561780962045304e-05,
+            3.3905660529853776e-05,
+            5.49746910110116e-05,
+            0.00108766567427665
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012610148638486862
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.0007302131270989776,
+          "per_action_mse": [
+            1.9412160327192396e-05,
+            3.367355020600371e-05,
+            5.98785700276494e-05,
+            0.0028078872710466385
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012263962998986244
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 30000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/30000.pt",
+      "checkpoint_sha256": "1218b922479561808a20535b5492a038c977e8b45b3eddc24c7abb1e7e57d03e",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.14,
+        "success_at_end": 0.02,
+        "success_once_100": 0.12,
+        "phases": {
+          "transport": 38,
+          "grasp": 4,
+          "success": 7,
+          "control/reach": 1
+        },
+        "updates": 30000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 0.0001312057429458946,
+          "per_action_mse": [
+            1.4216296222002711e-05,
+            2.4484723326168023e-05,
+            3.9248785469681025e-05,
+            0.000446845282567665
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012602667324244976
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.0003514713898766786,
+          "per_action_mse": [
+            1.491172042733524e-05,
+            2.5814693799475208e-05,
+            4.319374420447275e-05,
+            0.0013219643151387572
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012125561945140362
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 40000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/40000.pt",
+      "checkpoint_sha256": "3588b269b5d5c43c47e58527b4659656e6ca1544ece2009330abd867c3b7034c",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.26,
+        "success_at_end": 0.0,
+        "success_once_100": 0.24,
+        "phases": {
+          "transport": 27,
+          "success": 13,
+          "control/reach": 4,
+          "grasp": 4,
+          "placement/settling": 2
+        },
+        "updates": 40000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 0.00010140871745534241,
+          "per_action_mse": [
+            1.1777118743339088e-05,
+            1.9053768482990563e-05,
+            3.262858808739111e-05,
+            0.00034214937477372587
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.011987954378128052
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00025371165247634053,
+          "per_action_mse": [
+            1.346652970823925e-05,
+            2.25187795876991e-05,
+            3.497450961731374e-05,
+            0.0009438854176551104
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.011547470465302467
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 50000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/50000.pt",
+      "checkpoint_sha256": "bf8f423ec71a7500bce3dfbf5a8cbad136c386e2ba28eb16451b41447c4ef330",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.32,
+        "success_at_end": 0.02,
+        "success_once_100": 0.28,
+        "phases": {
+          "transport": 15,
+          "grasp": 13,
+          "control/reach": 6,
+          "success": 16
+        },
+        "updates": 50000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 8.01402929937467e-05,
+          "per_action_mse": [
+            1.0839457900146954e-05,
+            1.5754540072521195e-05,
+            2.92460299533559e-05,
+            0.0002646969514898956
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012121542356908321
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00024621334159746766,
+          "per_action_mse": [
+            1.26365375763271e-05,
+            1.8742892279988155e-05,
+            3.415827450226061e-05,
+            0.0009193141595460474
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.011987070553004742
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 60000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/60000.pt",
+      "checkpoint_sha256": "ebc0a81f640125bf9f139d0cdae8d8ff72240eb6aeb5e0697128519fd52d0185",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.5,
+        "success_at_end": 0.02,
+        "success_once_100": 0.44,
+        "phases": {
+          "transport": 15,
+          "success": 25,
+          "control/reach": 10
+        },
+        "updates": 60000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 5.3718405979452655e-05,
+          "per_action_mse": [
+            9.074090485228226e-06,
+            1.3891224625695031e-05,
+            2.532149665057659e-05,
+            0.0001665731251705438
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.01272470410913229
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00020404304086696357,
+          "per_action_mse": [
+            1.0113223652297165e-05,
+            1.7543143258080818e-05,
+            2.7612619305728003e-05,
+            0.0007609029416926205
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012296106666326523
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 70000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/70000.pt",
+      "checkpoint_sha256": "d58c240a4eee9a1f51df491f36b7ed0f1720de43357aeff6a28a5896974f6e86",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.44,
+        "success_at_end": 0.02,
+        "success_once_100": 0.42,
+        "phases": {
+          "success": 22,
+          "transport": 19,
+          "control/reach": 6,
+          "grasp": 3
+        },
+        "updates": 70000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 5.602343662758358e-05,
+          "per_action_mse": [
+            9.093122571357526e-06,
+            1.2097441867808811e-05,
+            2.309974661329761e-05,
+            0.00017979691619984806
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012654787860810757
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00020616297842934728,
+          "per_action_mse": [
+            1.0343750545871444e-05,
+            1.5774357962072827e-05,
+            2.6387175239506178e-05,
+            0.0007721461588516831
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012181255966424942
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 80000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/80000.pt",
+      "checkpoint_sha256": "fd98f2106a531931c18d169c0fba64aaffa2c0b79f3c066c0ea7f468e393fd88",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.84,
+        "success_at_end": 0.06,
+        "success_once_100": 0.82,
+        "phases": {
+          "transport": 5,
+          "success": 42,
+          "control/reach": 3
+        },
+        "updates": 80000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 4.368522058939561e-05,
+          "per_action_mse": [
+            7.506252586608753e-06,
+            1.0643142559274565e-05,
+            2.023821070906706e-05,
+            0.00013634507195092738
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.013001865707337856
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00022906986123416573,
+          "per_action_mse": [
+            8.702252671355382e-06,
+            1.4577176443708595e-05,
+            2.424642298137769e-05,
+            0.0008687530644237995
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012890978716313839
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 90000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/90000.pt",
+      "checkpoint_sha256": "25c69f8349dd449f1a073f67702d18cecd82db57d8ffa38ed1313a9316f77753",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.52,
+        "success_at_end": 0.04,
+        "success_once_100": 0.52,
+        "phases": {
+          "control/reach": 17,
+          "success": 26,
+          "transport": 7
+        },
+        "updates": 90000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 4.317195271141827e-05,
+          "per_action_mse": [
+            7.618202289449982e-06,
+            1.0524770914344117e-05,
+            2.0493009287747554e-05,
+            0.00013404307537712157
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012916624546051025
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.00025289086624979973,
+          "per_action_mse": [
+            8.925782822188921e-06,
+            1.5451025319634937e-05,
+            2.432412475172896e-05,
+            0.0009628604748286307
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.012787684798240662
+        }
+      }
+    },
+    {
+      "method": "bc",
+      "updates": 100000,
+      "checkpoint": "runs/clean-bc-100k/checkpoints/100000.pt",
+      "checkpoint_sha256": "168e79bcf828d809526d7ee8a70a4efebbd1e273ca83a8df5cf672551b6033dc",
+      "validation": {
+        "episodes": 50,
+        "success_once": 0.66,
+        "success_at_end": 0.06,
+        "success_once_100": 0.64,
+        "phases": {
+          "control/reach": 11,
+          "success": 33,
+          "transport": 6
+        },
+        "updates": 100000,
+        "training_mse": {
+          "frames": 77976,
+          "mse": 3.8069862057454884e-05,
+          "per_action_mse": [
+            7.214909146568971e-06,
+            9.510576091997791e-06,
+            1.697880907158833e-05,
+            0.00011857118079205975
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.01320701465010643
+        },
+        "heldout_mse": {
+          "frames": 3998,
+          "mse": 0.0002008804294746369,
+          "per_action_mse": [
+            8.47674618853489e-06,
+            1.3785429473500699e-05,
+            2.0976958694518544e-05,
+            0.0007602818077430129
+          ],
+          "deliberately_misaligned_next_obs_mse": 0.013093258254230022
+        }
+      }
+    },
+    {
+      "method": "dp",
+      "updates": 10000,
+      "checkpoint": "runs/clean-dp-30k/checkpoints/10000.pt",
+      "checkpoint_sha256": "354cb428b1f1de3cbf497fab88d2880aaeeabfd3a77c012994b727de17fe1e74",
+      "validation": {
+        "updates": 10000,
+        "episodes": 50,
+        "success_once": 1.0,
+        "success_at_end": 0.98,
+        "success_once_100": 1.0
+      }
+    },
+    {
+      "method": "dp",
+      "updates": 20000,
+      "checkpoint": "runs/clean-dp-30k/checkpoints/20000.pt",
+      "checkpoint_sha256": "7fd9ffdfedb5a779be65bbb742a36630c423cc092c4f6aeb7ebbe38643972afd",
+      "validation": {
+        "updates": 20000,
+        "episodes": 50,
+        "success_once": 1.0,
+        "success_at_end": 1.0,
+        "success_once_100": 1.0
+      }
+    },
+    {
+      "method": "dp",
+      "updates": 30000,
+      "checkpoint": "runs/clean-dp-30k/checkpoints/30000.pt",
+      "checkpoint_sha256": "6a64df7ab726a9502e0c4ee93069b3ab1263b4ea14cb7d47d97ffe269d46c25b",
+      "validation": {
+        "updates": 30000,
+        "episodes": 50,
+        "success_once": 1.0,
+        "success_at_end": 1.0,
+        "success_once_100": 1.0
+      }
+    }
+  ],
+  "selection_rule": "validation success_once, then success_at_end, then earliest update",
+  "test_seeds": [
+    40000,
+    40001,
+    40002,
+    40003,
+    40004,
+    40005,
+    40006,
+    40007,
+    40008,
+    40009,
+    40010,
+    40011,
+    40012,
+    40013,
+    40014,
+    40015,
+    40016,
+    40017,
+    40018,
+    40019,
+    40020,
+    40021,
+    40022,
+    40023,
+    40024,
+    40025,
+    40026,
+    40027,
+    40028,
+    40029,
+    40030,
+    40031,
+    40032,
+    40033,
+    40034,
+    40035,
+    40036,
+    40037,
+    40038,
+    40039,
+    40040,
+    40041,
+    40042,
+    40043,
+    40044,
+    40045,
+    40046,
+    40047,
+    40048,
+    40049,
+    40050,
+    40051,
+    40052,
+    40053,
+    40054,
+    40055,
+    40056,
+    40057,
+    40058,
+    40059,
+    40060,
+    40061,
+    40062,
+    40063,
+    40064,
+    40065,
+    40066,
+    40067,
+    40068,
+    40069,
+    40070,
+    40071,
+    40072,
+    40073,
+    40074,
+    40075,
+    40076,
+    40077,
+    40078,
+    40079,
+    40080,
+    40081,
+    40082,
+    40083,
+    40084,
+    40085,
+    40086,
+    40087,
+    40088,
+    40089,
+    40090,
+    40091,
+    40092,
+    40093,
+    40094,
+    40095,
+    40096,
+    40097,
+    40098,
+    40099
+  ],
+  "horizon": 200,
+  "credibility_targets": {
+    "success_once": 0.8,
+    "success_at_end": 0.7
+  }
+}

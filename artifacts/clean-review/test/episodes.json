@@ -1,0 +1,802 @@
+[
+  {
+    "seed": 40000,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40001,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40002,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40003,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40004,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40005,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40006,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40007,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40008,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40009,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40000
+  },
+  {
+    "seed": 40010,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40011,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40012,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40013,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40014,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40015,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40016,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40017,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40018,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40019,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40010
+  },
+  {
+    "seed": 40020,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40021,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40022,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40023,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40024,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40025,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40026,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40027,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40028,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40029,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40020
+  },
+  {
+    "seed": 40030,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40031,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40032,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40033,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40034,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40035,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40036,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40037,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40038,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40039,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40030
+  },
+  {
+    "seed": 40040,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40041,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40042,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40043,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40044,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40045,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40046,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40047,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40048,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40049,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40040
+  },
+  {
+    "seed": 40050,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40051,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40052,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40053,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40054,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40055,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40056,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40057,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40058,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40059,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40050
+  },
+  {
+    "seed": 40060,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40061,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40062,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40063,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40064,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40065,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40066,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40067,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40068,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40069,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40060
+  },
+  {
+    "seed": 40070,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40071,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40072,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40073,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40074,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40075,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40076,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40077,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40078,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40079,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40070
+  },
+  {
+    "seed": 40080,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40081,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40082,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40083,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40084,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40085,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40086,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40087,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40088,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40089,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40080
+  },
+  {
+    "seed": 40090,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40091,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40092,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40093,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40094,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40095,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40096,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40097,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40098,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  },
+  {
+    "seed": 40099,
+    "success_once": true,
+    "success_at_end": true,
+    "success_once_100": true,
+    "steps": 200,
+    "vector_batch_seed": 40090
+  }
+]

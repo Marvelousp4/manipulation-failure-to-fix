@@ -1,0 +1,11 @@
+{
+  "command": "evaluate",
+  "upstream": "/tmp/f2f-ManiSkill",
+  "checkpoint": "artifacts/bc-pickcube.pt",
+  "dataset": "/home/marvelousp4/.maniskill/demos/PickCube-v1/motionplanning/trajectory.state.pd_ee_delta_pos.physx_cpu.h5",
+  "output": "runs/clean-review/v02-train",
+  "seed": 0,
+  "episodes": 50,
+  "horizon": 200,
+  "videos": 2
+}

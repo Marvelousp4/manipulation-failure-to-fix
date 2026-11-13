@@ -1,0 +1,24 @@
+[
+  {
+    "seed": 10017,
+    "official": {
+      "success_once": 1.0,
+      "return": 87.97701263427734,
+      "episode_len": 200.0,
+      "reward": 0.43988505005836487,
+      "success_at_end": 0.0
+    },
+    "matched": true
+  },
+  {
+    "seed": 10019,
+    "official": {
+      "success_once": 1.0,
+      "return": 46.782432556152344,
+      "episode_len": 200.0,
+      "reward": 0.2339121699333191,
+      "success_at_end": 0.0
+    },
+    "matched": true
+  }
+]

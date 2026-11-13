@@ -1,0 +1,12 @@
+{
+  "episodes": 50,
+  "success_once": 0.04,
+  "success_at_end": 0.0,
+  "success_once_100": 0.02,
+  "phases": {
+    "transport": 42,
+    "success": 2,
+    "control/reach": 2,
+    "grasp": 4
+  }
+}

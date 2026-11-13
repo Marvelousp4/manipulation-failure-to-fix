@@ -1,0 +1,9 @@
+{
+  "episodes": 100,
+  "success_once": 1.0,
+  "success_at_end": 1.0,
+  "success_once_100": 1.0,
+  "method": "dp",
+  "updates": 20000,
+  "credible_target_met": true
+}

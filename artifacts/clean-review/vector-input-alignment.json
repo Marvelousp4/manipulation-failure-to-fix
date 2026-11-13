@@ -1,0 +1,6 @@
+{
+  "max_observation_difference": 0.0,
+  "max_first_action_roundoff": 1.1920928955078125e-07,
+  "policy": "v0.2 BC",
+  "note": "Batch-size-dependent floating point results are not guaranteed bitwise identical."
+}

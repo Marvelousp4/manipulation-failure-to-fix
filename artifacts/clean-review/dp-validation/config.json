@@ -1,0 +1,17 @@
+{
+  "upstream": ".cache/clean-ManiSkill",
+  "dataset": "runs/clean-review/data/trajectory.state.pd_ee_delta_pos.physx_cpu.h5",
+  "output": "runs/clean-review/dp-validation",
+  "updates": 30000,
+  "run_name": "clean-dp-30k",
+  "eval_every": 10000,
+  "batch_size": 1024,
+  "dataset_sha256": "ae22f4fee171fbf75cab6e42b161510e41b0306cf5cf2ed71ba766b735f366e2",
+  "validation_seeds": [
+    20000,
+    20049
+  ],
+  "horizon": 200,
+  "vector_envs": 10,
+  "noise_seed": "first seed of each fixed batch"
+}

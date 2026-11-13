@@ -1,0 +1,10 @@
+{
+  "episodes": 2,
+  "success_once": 0.5,
+  "success_at_end": 0.0,
+  "success_once_100": 0.5,
+  "phases": {
+    "transport": 1,
+    "success": 1
+  }
+}

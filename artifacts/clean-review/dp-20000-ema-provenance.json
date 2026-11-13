@@ -1,0 +1,9 @@
+{
+  "parent_checkpoint": "runs/clean-dp-30k/checkpoints/20000.pt",
+  "parent_sha256": "7fd9ffdfedb5a779be65bbb742a36630c423cc092c4f6aeb7ebbe38643972afd",
+  "published_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "published_path": "artifacts/clean-review/dp-20000-ema.pt",
+  "weights_verified_exact": true,
+  "updates": 20000,
+  "omitted": "Non-EMA training weights; EMA inference tensors are unchanged"
+}

@@ -1,0 +1,9 @@
+{
+  "remote": "https://github.com/mani-skill/ManiSkill.git",
+  "commit": "62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3",
+  "patches": {
+    "dp-clean-training.patch": "85f0ce51c4c82f9e915467bc1016a968312c14f3ddd43c5db4f68b1082d3f987",
+    "bc-batched-transfer.patch": "c19c80d7d07995a14b451461f98e97fb022d951bab2fc4a4786d65b3b13e34dd",
+    "bc-clean-training.patch": "cbc9f362407c5f121df4fac88d30bc08fb1329c26c3f6b393cdfaa8347488df0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "v0.2 checkpoint; diagnostic seeds only; six frames per video inspected plus simulator telemetry",
+  "examples": [
+    {
+      "seed": 0,
+      "phase": "transport",
+      "evidence": "Cube is grasped and lifted; repeated lift/lower motion does not settle at the goal."
+    },
+    {
+      "seed": 6,
+      "phase": "reach/control symptom",
+      "evidence": "Arm remains near the starting pose and does not reach the cube; action replay confirms the controller itself works."
+    },
+    {
+      "seed": 34,
+      "phase": "grasp",
+      "evidence": "Arm reaches near the cube, but does not secure it; cube is pushed across the table."
+    },
+    {
+      "seed": 11038,
+      "phase": "placement/settling",
+      "evidence": "Cube is grasped and transported near the goal, but the arm does not satisfy goal-and-static success."
+    }
+  ],
+  "uncertainty": "Phase labels are descriptive. These videos do not isolate architecture, dataset coverage or optimization as causal mechanisms."
+}

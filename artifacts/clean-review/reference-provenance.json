@@ -1,0 +1,18 @@
+{
+  "solver": "mani_skill.examples.motionplanning.panda.solutions.pick_cube.solve",
+  "mani_skill": "3.0.1",
+  "generation_numpy": "1.26.4",
+  "generation_scipy": "1.14.1",
+  "evaluation_numpy": "2.5.4",
+  "evaluation_scipy": "1.18.1",
+  "seeds": [
+    11000,
+    11049
+  ],
+  "raw_sha256": "5543681adf5f97afa8ec9a1198df7d665a11dad4cc01f34e10087267b4c6b5a6",
+  "converted_sha256": "05ea8e4b14ce4bf651202b5cd13fe10e6ef0ca3a548d8c192d64e4474e152734",
+  "solved": 50,
+  "attempted": 50,
+  "controller": "pd_ee_delta_pos",
+  "reconfiguration_freq": 1
+}

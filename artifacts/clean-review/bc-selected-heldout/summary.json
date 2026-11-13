@@ -1,0 +1,13 @@
+{
+  "episodes": 50,
+  "success_once": 0.58,
+  "success_at_end": 0.12,
+  "success_once_100": 0.52,
+  "phases": {
+    "transport": 14,
+    "success": 29,
+    "grasp": 2,
+    "control/reach": 4,
+    "placement/settling": 1
+  }
+}

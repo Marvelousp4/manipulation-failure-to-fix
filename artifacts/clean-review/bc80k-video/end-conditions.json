@@ -1,0 +1,7 @@
+{
+  "near_goal": 0,
+  "robot_static": 2,
+  "near_goal_but_moving": 0,
+  "outside_goal": 2,
+  "success_then_lost": 1
+}

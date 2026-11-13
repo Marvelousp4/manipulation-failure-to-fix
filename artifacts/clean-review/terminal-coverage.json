@@ -1,0 +1,8 @@
+{
+  "frames": 77976,
+  "supervised_pre_action_states_after_prior_success": 4314,
+  "successful_terminal_states_without_action_label": 1000,
+  "supervised_states_near_goal": 6190,
+  "arm_hold_actions_below_001_normalized": 3762,
+  "caveat": "Coverage counts are observed; their causal contribution to instability is unproven. Official DP additionally pads terminal action sequences with zero arm commands."
+}

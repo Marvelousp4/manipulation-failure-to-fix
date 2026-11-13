@@ -1,0 +1,50 @@
+{
+  "control_mode": "pd_ee_delta_pos",
+  "arm_config": {
+    "joint_names": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7"
+    ],
+    "pos_lower": -0.1,
+    "pos_upper": 0.1,
+    "stiffness": 1000.0,
+    "damping": 100.0,
+    "force_limit": 100,
+    "friction": 0.0,
+    "ee_link": "panda_hand_tcp",
+    "urdf_path": "/home/marvelousp4/projects/manipulation-failure-to-fix/.venv/lib/python3.12/site-packages/mani_skill/assets/robots/panda/panda_v2.urdf",
+    "frame": "root_translation",
+    "root_link_name": null,
+    "use_delta": true,
+    "use_target": false,
+    "interpolate": false,
+    "normalize_action": true,
+    "delta_solver_config": {
+      "type": "levenberg_marquardt",
+      "alpha": 1.0
+    },
+    "drive_mode": "force"
+  },
+  "control_freq": 20,
+  "action_low": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+  ],
+  "action_high": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "obs_shape": [
+    1,
+    42
+  ]
+}

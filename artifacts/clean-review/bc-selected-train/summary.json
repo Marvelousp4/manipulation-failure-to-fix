@@ -1,0 +1,11 @@
+{
+  "episodes": 50,
+  "success_once": 0.86,
+  "success_at_end": 0.1,
+  "success_once_100": 0.82,
+  "phases": {
+    "success": 43,
+    "transport": 4,
+    "control/reach": 3
+  }
+}

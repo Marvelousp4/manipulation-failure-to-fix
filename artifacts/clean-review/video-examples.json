@@ -1,0 +1,71 @@
+{
+  "classification": "Heuristic earliest failure phase; control/reach is a symptom, not evidence of a controller implementation bug",
+  "selected": {
+    "transport": 0,
+    "control/reach": 6,
+    "grasp": 34,
+    "placement/settling": 11038
+  },
+  "episodes": [
+    {
+      "seed": 0,
+      "success_once": false,
+      "success_at_end": false,
+      "success_once_100": false,
+      "success_at_100": false,
+      "grasped_once": true,
+      "lifted": true,
+      "reached_goal_once": false,
+      "min_tcp_distance": 0.008657448925077915,
+      "clipped_action_steps": 37,
+      "steps": 200,
+      "initial_observation_sha256": "ea01977d68ae89e6641076722ff00dc6cfd6db2d9d657aaab08296d03ec71c6b",
+      "failure_phase": "transport"
+    },
+    {
+      "seed": 6,
+      "success_once": false,
+      "success_at_end": false,
+      "success_once_100": false,
+      "success_at_100": false,
+      "grasped_once": false,
+      "lifted": false,
+      "reached_goal_once": false,
+      "min_tcp_distance": 0.13761886954307556,
+      "clipped_action_steps": 200,
+      "steps": 200,
+      "initial_observation_sha256": "29ba8b81de6468ff980add50098d39645fd0c4e51cbb59a506775755e5462117",
+      "failure_phase": "control/reach"
+    },
+    {
+      "seed": 34,
+      "success_once": false,
+      "success_at_end": false,
+      "success_once_100": false,
+      "success_at_100": false,
+      "grasped_once": false,
+      "lifted": false,
+      "reached_goal_once": false,
+      "min_tcp_distance": 0.03080006130039692,
+      "clipped_action_steps": 62,
+      "steps": 200,
+      "initial_observation_sha256": "5b3851b5c359ff4f09cc6a20f1f526f769646fb7cefc81c1ae39f0dd31b6832e",
+      "failure_phase": "grasp"
+    },
+    {
+      "seed": 11038,
+      "success_once": false,
+      "success_at_end": false,
+      "success_once_100": false,
+      "success_at_100": false,
+      "grasped_once": true,
+      "lifted": true,
+      "reached_goal_once": true,
+      "min_tcp_distance": 0.013085144571959972,
+      "clipped_action_steps": 121,
+      "steps": 200,
+      "initial_observation_sha256": "58e43273b030c7df4c14d0d7e126d6b8fc85ea2733f744ec8c1ea0aede7021ac",
+      "failure_phase": "placement/settling"
+    }
+  ]
+}
