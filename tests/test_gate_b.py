@@ -130,3 +130,20 @@ def test_chunk_observation_clock_preserves_queued_actions():
     assert p.state()["history_frames"].tolist() == [8, 9]
     assert p.state()["queue_source_inference"] == 9
     assert len(p.chunks.actions) == 6
+
+
+def test_trace_files_preserve_shapes_and_repeat_byte_exactly(tmp_path):
+    import gzip
+    import json
+
+    from failure2fix.gate_b import save_run
+
+    run = fake_run()
+    run["frames"][0].state["policy/queue"] = np.empty((0, 4), dtype=np.float32)
+    a, b = tmp_path / "a.gz", tmp_path / "b.gz"
+    save_run(a, run)
+    save_run(b, run)
+    assert a.read_bytes() == b.read_bytes()
+    first = json.loads(gzip.decompress(a.read_bytes()).decode().splitlines()[0])
+    assert first["state"]["policy/queue"]["shape"] == [0, 4]
+    assert first["state"]["policy/queue"]["dtype"] == "float32"

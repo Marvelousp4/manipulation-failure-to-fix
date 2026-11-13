@@ -1,0 +1,92 @@
+[
+  {
+    "seed": 52000,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52000,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52000,
+    "branch": "disturbance",
+    "byte_equal": true
+  },
+  {
+    "seed": 52001,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52001,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52001,
+    "branch": "disturbance",
+    "byte_equal": true
+  },
+  {
+    "seed": 52002,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52002,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52002,
+    "branch": "disturbance",
+    "byte_equal": true
+  },
+  {
+    "seed": 52003,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52003,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52003,
+    "branch": "disturbance",
+    "byte_equal": true
+  },
+  {
+    "seed": 52004,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52004,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52004,
+    "branch": "disturbance",
+    "byte_equal": true
+  },
+  {
+    "seed": 52005,
+    "branch": "clean",
+    "byte_equal": true
+  },
+  {
+    "seed": 52005,
+    "branch": "sham",
+    "byte_equal": true
+  },
+  {
+    "seed": 52005,
+    "branch": "disturbance",
+    "byte_equal": true
+  }
+]

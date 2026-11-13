@@ -219,7 +219,7 @@ def main():
         result["selected"] = selected
         if selected is None:
             result["status"] = "INCONCLUSIVE: no nontrivial severity in the predeclared pilot"
-            return
+            raise SystemExit(2)
         impulse = selected["impulse_Ns"]
         for seed in seeds:
             for branch, reference in [

@@ -1,0 +1,56 @@
+{
+  "pass": true,
+  "seeds": [
+    50000,
+    50001,
+    50002
+  ],
+  "horizon": 120,
+  "atol": 1e-05,
+  "cases": [
+    {
+      "seed": 50000,
+      "pass": true,
+      "branch_step": 46,
+      "first_mismatch": null,
+      "prefix": {
+        "max_error": 0.0
+      },
+      "suffix": {
+        "max_error": 0.0
+      },
+      "reference_success_once": true,
+      "reference_success_at_end": true
+    },
+    {
+      "seed": 50001,
+      "pass": true,
+      "branch_step": 37,
+      "first_mismatch": null,
+      "prefix": {
+        "max_error": 0.0
+      },
+      "suffix": {
+        "max_error": 0.0
+      },
+      "reference_success_once": true,
+      "reference_success_at_end": true
+    },
+    {
+      "seed": 50002,
+      "pass": true,
+      "branch_step": 41,
+      "first_mismatch": null,
+      "prefix": {
+        "max_error": 0.0
+      },
+      "suffix": {
+        "max_error": 0.0
+      },
+      "reference_success_once": true,
+      "reference_success_at_end": true
+    }
+  ],
+  "method": "independent reset plus deterministic policy/action prefix replay",
+  "limitation": "Does not verify set_state_dict restore or cross-machine reproducibility"
+}

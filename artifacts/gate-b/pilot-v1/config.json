@@ -1,0 +1,71 @@
+{
+  "plan": {
+    "gate": "B: controlled physical fault feasibility",
+    "base_commit": "6e4b7a2",
+    "checkpoint": "artifacts/clean-review/dp-20000-ema.pt",
+    "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+    "seeds": [
+      52000,
+      52001,
+      52002,
+      52003,
+      52004,
+      52005
+    ],
+    "locked_seed_ranges": [
+      [
+        20000,
+        20049
+      ],
+      [
+        40000,
+        40099
+      ]
+    ],
+    "horizon": 200,
+    "controller": "pd_ee_delta_pos",
+    "simulation": "CPU PhysX, existing 0.01 s simulation step / 0.05 s control step",
+    "trigger": "first three consecutive post-step is_grasped=true reports; at least 8 steps must remain",
+    "intervention_timing": "after selecting the next normal command, immediately before its first physics substep",
+    "disturbance": "one native add_force_at_point(mode=impulse) at world-frame cube COM; vector [J,0,0] N s",
+    "coarse_impulses_Ns": [
+      0.004,
+      0.016,
+      0.064,
+      0.256
+    ],
+    "branches": [
+      "clean (no API call)",
+      "sham (same API with zero impulse)",
+      "disturbance"
+    ],
+    "prefix": "identical through the grasp-trigger frame and through the next pre-impulse command/policy/RNG snapshot",
+    "observations": "no extra sensor refresh or inference; first post-impulse observation is returned after the intervened control step and enters policy on the following call",
+    "validity_gate": "free-body momentum increment J/m, zero COM torque, one-shot application, no pose change at API call; stop on failure",
+    "sham_gate": "compare full 200-step traces, state/controller fields, policy history/queue and RNG; stop on divergence",
+    "comparison_tolerance": {
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "rng": "exact hashes"
+    },
+    "pilot_order": "all clean/sham pairs first; then all predeclared severities on all six seeds, ascending severity",
+    "selection": "eligible if final success is neither 0/6 nor 6/6 and includes a paired regression and a preserved success; closest to 3/6, then smallest impulse",
+    "refinement": "If no coarse level is eligible and adjacent levels bracket 6/6 and 0/6, evaluate exactly one geometric midpoint on all six seeds; otherwise stop inconclusive. No seed exclusion.",
+    "repeat": "repeat all three branches of the selected configuration on all six identical seeds; compare full traces and stop at the first mismatch",
+    "videos": "after repeat verification, render all three branches for the first seed, first paired regression and first preserved success (deduplicated); verify rendered traces against stored traces",
+    "regrasp_latency": "first lost-grasp frame after the event to the first of three consecutive grasped frames; null if no loss, right-censored if never regained",
+    "goal_latency": "event to first of five consecutive success frames; completion proxy if the task was not yet successful at the event; compare with paired clean",
+    "uncertainty": "Wilson 95% intervals on six unique seeds, paired regression/improvement counts; repeats do not increase n. Severity selected on the same exploratory pilot, no confirmatory inference.",
+    "pass": "physical validity, all prefix/sham checks, eligible nontrivial severity, and deterministic repeats pass",
+    "limits": "one state-only policy/task, fixed direction, idealized uncalibrated impact, one timestep; no repair, learned weights changes, novelty, sim-to-real or general robustness claim",
+    "rendering": "CPU renderer in every branch and repetition; optional frame reads never enter policy"
+  },
+  "plan_sha256": "136eb0b807f78935e47151f955dbb28a16bc886ee23ae5ad08f1c80c321f262a",
+  "arguments": {
+    "plan": "artifacts/gate-b/plan.json",
+    "upstream": ".cache/clean-ManiSkill",
+    "output": "runs/gate-b/pilot-v1"
+  },
+  "source_commit": "565ffe38b3f32ff33b13413fb163659bcd0ec303",
+  "source_diff": ""
+}

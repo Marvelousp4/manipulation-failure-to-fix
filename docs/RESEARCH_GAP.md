@@ -50,8 +50,8 @@ Do not conflate failure prediction with intervention benefit. Compare **multiple
 
 **Quality gate:** one held-out falsifiable finding + executable experiment + honest limitations. Algorithm/paper novelty remains unestablished. Public repo needs IP/license review; large artifacts should use Releases/LFS/external storage rather than repeated binary commits.
 
-## Replay gate (implementation only)
+## Replay gate
 ```bash
 python scripts/probe_replay_gate.py
 ```
-Replays frozen 20k-EMA DP with new seeds 50000–50002; compares actions, observations, rigid-body states, controller state, contact flags and continuations. **No ManiSkill execution result yet.** Passing verifies deterministic re-simulation, not arbitrary snapshot restoration.
+Replays frozen 20k-EMA DP with new seeds 50000–50002; compares actions, observations, rigid-body states, controller state, contact flags and continuations. Gate A passed exact replay on seeds 50000–50002; [archived summary](../artifacts/gate-b/gate-a-reference.json). This verifies deterministic re-simulation, not arbitrary snapshot restoration. [Gate B](GATE_B.md) reports the physical impulse pilot.

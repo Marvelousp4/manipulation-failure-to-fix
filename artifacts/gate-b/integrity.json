@@ -1,0 +1,14 @@
+{
+  "artifacts/SHA256SUMS": {
+    "pass_": true,
+    "files": 25
+  },
+  "artifacts/clean-review/SHA256SUMS": {
+    "pass_": true,
+    "files": 125
+  },
+  "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "unique_development_seeds": 6,
+  "stored_runs": 54,
+  "tests": "34 passed; 601 upstream deprecation warnings"
+}

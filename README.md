@@ -1,6 +1,6 @@
 # Manipulation Failure-to-Fix
 
-Reproducible manipulation-policy failure research. Robustness experiments are paused.
+Reproducible manipulation-policy failure research. Clean baseline and controlled physical-fault feasibility are verified.
 
 Clean PickCube reference: official Diffusion Policy, selected at 20k updates, **100/100**
 untouched test successes and **100/100** successes retained at step 200.
@@ -23,6 +23,7 @@ Replay gate (requires prepared WSL environment):
 ```bash
 python scripts/probe_replay_gate.py
 ```
-[Research gate](docs/RESEARCH_GAP.md). Gate is **not yet run on ManiSkill**.
+[Research gate](docs/RESEARCH_GAP.md). Gate A passed exact replay.
+[Gate B](docs/GATE_B.md): paired impulse pilot passed; no repair algorithms.
 
 License pending IP/open-source review.

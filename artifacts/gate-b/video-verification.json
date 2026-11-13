@@ -1,0 +1,62 @@
+[
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52000-clean.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  },
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52000-disturbance.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  },
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52000-sham.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  },
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52002-clean.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  },
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52002-disturbance.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  },
+  {
+    "path": "artifacts/gate-b/pilot-v1/videos/52002-sham.mp4",
+    "frames": 200,
+    "fps": 20.0,
+    "shape": [
+      512,
+      512,
+      3
+    ]
+  }
+]
