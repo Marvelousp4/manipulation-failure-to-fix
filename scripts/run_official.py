@@ -8,6 +8,7 @@ import gymnasium as gym
 
 p = argparse.ArgumentParser()
 p.add_argument("--render-backend", default="none")
+p.add_argument("--reconfiguration-freq", type=int)
 p.add_argument("--module")
 p.add_argument("--script")
 a, remainder = p.parse_known_args()
@@ -16,6 +17,8 @@ make = gym.make
 
 def configured_make(*args, **kwargs):
     kwargs["render_backend"] = a.render_backend
+    if a.reconfiguration_freq is not None:
+        kwargs["reconfiguration_freq"] = a.reconfiguration_freq
     return make(*args, **kwargs)
 
 

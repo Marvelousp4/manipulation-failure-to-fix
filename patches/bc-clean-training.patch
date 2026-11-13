@@ -1,0 +1,20 @@
+--- a/examples/baselines/bc/bc.py
++++ b/examples/baselines/bc/bc.py
+@@ -217,6 +217,8 @@
+     torch.save(
+         {
+             "actor": actor.state_dict(),
++            "optimizer": optimizer.state_dict(),
++            "updates": iteration,
+         },
+         f"runs/{run_name}/checkpoints/{tag}.pt",
+     )
+@@ -321,7 +323,7 @@
+ 
+     best_eval_metrics = defaultdict(float)
+ 
+-    for iteration, batch in enumerate(dataloader):
++    for iteration, batch in enumerate(dataloader, start=1):
+         log_dict = {}
+         obs, action, _ = batch
+         pred_action = actor(obs)

@@ -1,0 +1,15 @@
+{
+  "base_commit": "160c11ea8ecf9f839a9193faa322dcc863b25c55",
+  "training": "Official state BC, corrected replay data, seed 1, 100000 updates, checkpoint/validation every 10000 updates; fresh run because original preprocessing was defective",
+  "diagnostic_train_seeds": [0, 49],
+  "diagnostic_heldout_seeds": [11000, 11049],
+  "validation_seeds": [20000, 20049],
+  "untouched_test_seeds": [40000, 40099],
+  "horizon": 200,
+  "success": "Ignore terminations; report success_once and success_at_end at fixed horizon, plus success_once at 100 steps",
+  "selection": "Maximum validation success_once; tie: maximum success_at_end; tie: earliest checkpoint",
+  "credible_target": "At least 80% validation and test success_once, at least 70% success_at_end",
+  "fallback": "If BC validation remains below target, run official Diffusion Policy on the same data and validation seeds before selecting the final model",
+  "test_rule": "Select model and checkpoint using validation only; one final evaluation on the untouched test seeds",
+  "robustness": "No robustness experiments"
+}

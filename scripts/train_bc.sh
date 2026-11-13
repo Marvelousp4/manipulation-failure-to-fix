@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
+if [ -e artifacts/bc-pickcube.pt ]; then
+  echo "Preserve v0.2 evidence; use scripts/prepare_clean.sh and scripts/train_clean_bc.py" >&2
+  exit 1
+fi
 # Run from repository root after installing requirements-sim.txt.
 export OMP_NUM_THREADS=1
 export PYTHONUNBUFFERED=1
