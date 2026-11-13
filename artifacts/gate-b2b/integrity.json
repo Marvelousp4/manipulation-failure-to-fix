@@ -1,0 +1,31 @@
+{
+  "artifacts/SHA256SUMS": {
+    "pass_": true,
+    "files": 25
+  },
+  "artifacts/clean-review/SHA256SUMS": {
+    "pass_": true,
+    "files": 125
+  },
+  "artifacts/gate-b/SHA256SUMS": {
+    "pass_": true,
+    "files": 72
+  },
+  "artifacts/gate-b2/SHA256SUMS": {
+    "pass_": true,
+    "files": 9
+  },
+  "artifacts/gate-b2a/SHA256SUMS": {
+    "pass_": true,
+    "files": 23
+  },
+  "checkpoint_sha256": "7a6af7f4e51389a54bc834807348c6866a7babd702c9be7a8ea655011cb9fd53",
+  "operational_code_protocol_unchanged_after_preregistration": true,
+  "source_commit": "5a2fa49984f802a66ad625e0e957f80687ef8f20",
+  "exit_code": 1,
+  "completed_rollouts": 102,
+  "ordinary_records": 101,
+  "stopped_case_retained": true,
+  "lossless_record_reconstruction": true,
+  "tests": "65 before confirmation; 66 after offline audit test"
+}

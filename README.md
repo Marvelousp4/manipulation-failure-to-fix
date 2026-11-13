@@ -27,5 +27,6 @@ python scripts/probe_replay_gate.py
 [Gate B](docs/GATE_B.md): paired impulse pilot passed; no repair algorithms.
 [Gate B2](docs/GATE_B2.md): confirmation stopped on native contact fingerprints; Gate C NO-GO.
 [Gate B2a](docs/GATE_B2A.md): representation artifact diagnosed; original stop retained.
+[Gate B2b](docs/GATE_B2B.md): 50 exact controls passed; confirmation stopped on height guard.
 
 License pending IP/open-source review.

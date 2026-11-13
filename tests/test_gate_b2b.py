@@ -189,3 +189,11 @@ def test_rollout_exception_exposes_partial_actions_policy_and_frames(monkeypatch
         gate.run_branch(lambda: env, None, 1, "clean", capture=capture)
     assert env.closed and len(capture["frames"]) == 1
     assert capture["control_step"] == 1 and "policy_state" in capture and "rng_state" in capture
+
+
+def test_offline_box_rotation_normalizes_native_float32_quaternion_in_double():
+    from scripts.analyze_gate_b2b_stop import rotation
+
+    q = np.array([np.sqrt(0.5), 0, 0, np.sqrt(0.5)], dtype=np.float32)
+    expected = np.array([[0, -1, 0], [1, 0, 0], [0, 0, 1]])
+    np.testing.assert_allclose(rotation(q), expected, atol=1e-14)

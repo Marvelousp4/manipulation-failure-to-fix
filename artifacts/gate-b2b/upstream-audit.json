@@ -1,0 +1,14 @@
+{
+  "classes": {
+    "Agent": {
+      "unchanged": true,
+      "ast_sha256": "f4f8e7522878958c7de8883de5068b60a5198d4de02b648ff3bc53af5f1e929b"
+    },
+    "Args": {
+      "unchanged": true,
+      "ast_sha256": "e6a85dbaa8dd293166428dbbb34bd52c2e624749058dad38eee92926084e8e13"
+    }
+  },
+  "commit": "62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3",
+  "diff_sha256": "0382db986a5e37ccd3bbd38ea2c99ac4d382d3bb76968a2daaa82ded30d810d3"
+}
